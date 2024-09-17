@@ -1,0 +1,186 @@
+\include{packages}
+\include{definitions}
+
+
+\begin{document}
+
+\mychapter{Corso}
+\begin{multicols}{3}
+
+  \mysection{Orario}
+  \mydefinition{Lezione}
+  \begin{enumerate}
+  \item Luned\'i dalle 8:30 alle 10:30
+  \item Marted\'i dalle 10:30 alle 12:30
+  \item Gioved\'i dalle 10:30 alle 12:30
+  \end{enumerate}
+  \mydefinition{Ricevimento} (edificio C, primo piano, 161)
+  \begin{enumerate}
+  \item Luned\'i pomeriggio (16:30)
+  \item Venerd\'i pomeriggio
+  \end{enumerate}
+
+  \mysection{Programma}
+  \mydefinition{Primo semestre}
+  Si studia la meccanica classica, una teoria fisica nata dal trattato di
+  meccanica analitica (razionale) pubblicato da Lagrange. Da uno studio
+  sistematico della meccanica Newtoniana e dei suoi principi si espone la
+  teoria meccanica di Lagrange e successivamente la teoria di Hamilton le cui
+  formulazioni saranno spunto per un campo della matematica detto ``calcolo
+  delle variazioni'' e del cosidetto ``principio variazionale''.
+
+  \begin{equation}
+    \begin{gathered}
+      \text{Newtoniana} \to
+      \text{Lagrangiana} \to
+      \text{Hamiltoniana} \\
+      \to \text{Quantistica}
+    \end{gathered}
+  \end{equation}
+
+  Successivamente si studier\'a il legame fra le simmetrie in fisica e le
+  quantit\'a conservate.
+
+  \begin{equation}
+    \text{Simmetrie}
+    \begin{matrix}
+      \xrightarrow{\text{Lagrange}} \\
+      \xleftarrow{\text{Hamilton}}
+    \end{matrix}
+    \text{Conservazioni}
+  \end{equation}
+
+  Si affronteranno studi sul corpo rigido introducendo il formalismo
+  tensoriale. Si studieranno le piccole oscillazioni ovvero la linearizzazione
+  dei moti attorno ai punti di equilibrio stabili.
+
+  \mydefinition{Secondo semestre}
+  Si studia la relativit\'a ristretta in maniera pi\'u approfondita attraverso
+  gli strumenti sviluppati nel primo semestre. Infine attraverso la meccanica
+  di Hamilton si studier\'a la meccanica microscopica e come essa si possa
+  applicare alla termodinamica.
+
+  \mysection{Esame}
+  L'esame scritto \'e formato da 4 problemi: A1, A2, R, S (dove A1 \'e
+  solitamente un problema sulle piccole oscillazioni). Ogni problema \'e
+  composto da 4 domande di difficolt\'a crescente per un totale di 16 punti
+  l'uno. Successivamente se uno \'e soddisfatto dell'esame e a meno che i
+  docenti non lo richiedano, il voto pu\'o essere finalizzato senza il
+  superamento dell'esame orale.
+
+  \mysection{Bibliografia}
+  \begin{itemize}
+  \item ``Landau 1''
+  \item ``Goldsten''
+  \item ``Arnold''
+  \end{itemize}
+
+\end{multicols}
+
+\mychapter{Appunti}
+\begin{multicols}{3}
+  \mydefinition{Punto materiale}
+  Il sistema fisico pi\'u semplice possibile descritto univocamente dalla sua
+  posizione $\vec{x}(t)$, la cui evoluzione temporale si esprime con le
+  quantit\'a cinematiche, rispettivamente: \textit{velocit\'a},
+  \textit{accelerazione}, \textit{quantit\'a di moto},
+  \textit{momento angolare} ed \textit{energia cinetica}:
+  \begin{equation}
+    \label{eq:quantita-cinematiche}
+    \begin{gathered}
+      \vec{v} \equiv \dv{\vec{x}}{t} = \dot{\vec{x}}
+      \quad
+      \vec{a} \equiv \dv{\vec{v}}{t} = \ddot{\vec{x}} \\
+      \vec{p} \equiv m \vec{v}
+      \quad
+      \vec{l} \equiv \vec{x} \wedge \vec{p}
+      \quad
+      T \equiv \frac{1}{2}m|\vec{v}|^2
+    \end{gathered}
+  \end{equation}
+
+  \mydefinition{Principi della dinamica}
+  \begin{enumerate}
+  \item Se siamo in un sistema di riferimento inerziale e non agiscono forze
+    esterne sul punto materiale allora esso compie un moto rettilineo uniforme
+    (o in quiete).
+  \item Se agisce una forza $F$ sul punto materiale allora
+    $F = m\vec{a} = \dot{\vec{p}}$
+  \item In un sistema isolato la forza che un punto materiale esercita su un
+    altro \'e uguale in modulo e direzione ed opposto in verso rispetto alla
+    forza che l'altro esercita su di esso.
+  \end{enumerate}
+
+  \mytheorem{Teorema dell'energia cinetica}
+  La variazione di energia cinetica \'e pari al lavoro elementare compiuto
+  dalla forza.
+  \begin{equation}
+    \label{eq:teorema-cinetica}
+    \text{d}T = \vec{F} \cdot \text{d}\vec{x}
+  \end{equation}
+  \begin{equation*}
+    \myproof{
+    \begin{gathered}
+      \dv{T}{t} =
+      \dv{t}\left(\frac{1}{2}m(\vec{v}\cdot\vec{v})\right) =
+      \frac{1}{2}m\dv{\vec{v}}{t}\cdot\vec{v} +
+      \frac{1}{2}m\vec{v}\cdot\dv{\vec{v}}{t} \\ =
+      m\dv{\vec{v}}{t}\cdot\vec{v} = \dv{\vec{p}}{t}\cdot\vec{v} =
+      \vec{F} \cdot \vec{v} = \vec{F} \cdot \dv{\vec{x}}{t} \\
+      \implies \text{d}T = \vec{F} \cdot \text{d}\vec{x}
+    \end{gathered}}
+  \end{equation*}
+
+  % Da aggiornare
+  \mytheorem{Teorema momento angolare}
+  La derivata del momento angolare di un punto materiale rispetto ad un
+  \textit{polo fisso} \'e il momento della forza
+  \begin{equation}
+    \label{eq:teorema-momento-angolare}
+    \dv{\vec{l}}{t} = \vec{x} \wedge \vec{F}
+  \end{equation}
+  \begin{equation*}
+    \myproof{
+      \begin{gathered}
+        \dv{l}{t} = \dv{t}\left(\vec{x} \wedge \vec{p}\right) =
+        \dot{\vec{x}} \wedge \vec{p} + \vec{x} \wedge \vec{F} =
+        \vec{v} \wedge m\vec{v} + \vec{x} \wedge \vec{F} \\
+        = m\cancelto{0}{(\vec{v} \wedge \vec{v})} + \vec{x} \wedge \vec{F} =
+        \vec{x} \wedge \vec{F}
+      \end{gathered}}
+  \end{equation*}
+
+  \mytheorem{Campi conservativi}
+  \begin{equation}
+    \label{eq:campi-conservativi}
+    \begin{gathered}
+      \pdv{f}{x} \Big)_y = \lim_{\varepsilon \to 0} \frac{f(x + \varepsilon, y) - f(x, y)}{\varepsilon}\\
+      \vec{F} = -\vec{\nabla}U(\vec{x}, t) = \left(
+        \pdv{U}{x}, \pdv{U}{y}, \pdv{U}{z}
+      \right) \\
+      F_x = -\pdv{U}{x} \quad F_y = -\pdv{U}{y} \quad F_z = -\pdv{U}{z} \\
+      f(x + \text{d}x, y + \text{d}y) \approx f(x, y) + \pdv{f}{x}\text{d}x
+      + \pdv{f}{y}\text{d}y \\
+      = f(x, y) + \text{d}f(x, y) = \vec{\nabla}f \cdot \text{d}\vec{x}
+    \end{gathered}
+  \end{equation}
+
+  \mytheorem{Conservazione dell'energia meccanica}
+  \begin{equation}
+    \label{eq:conservazione-meccanica}
+    \begin{gathered}
+      U(x, y, z) \implies \dv{t}\left(T + U\right) = 0 \\
+      U(x, y, z, t) \implies \dv{t}\left(T + U\right) = \pdv{U}{t}
+    \end{gathered}
+  \end{equation}
+
+  \mytheorem{Dinamica dei sistemi}
+  Centro di massa \\
+  Teoremi di K\"onig
+
+
+\end{multicols}
+
+
+
+\end{document}

@@ -1,0 +1,32 @@
+\include{packages}
+\include{definitions}
+
+\begin{document}
+\mychapter{Appunti}
+\begin{multicols}{3}
+  \mydefinition{Distanza}
+  Una funzione $d: X \cross X \to \reals$ tale che
+  \begin{enumerate}
+  \item $d(x, y) = d(y, x)$
+  \item $d(x, y) \leq 0$, e $d(x, y) = 0$ se $x=y$
+  \item $d(x, y) \leq d(x, z) + d(z, y)$
+  \end{enumerate}
+  \begin{equation}
+    \label{eq:distanze-comuni}
+    \begin{gathered}
+      d: \reals^N \cross \reals^N \to \reals \\
+      d(x, y) = |x - y| \quad \text{(distanza euclidea)} \\
+      d: \reals^N \cross \reals^N \to \reals \\
+    \end{gathered}
+  \end{equation}
+  la restrizione del dominio di una distanza porta ad una
+  \textit{metrica ridotta}
+  \begin{equation}
+    \label{eq:metrica-ridotta}
+    \begin{gathered}
+      d: X \cross X \to \reals \quad A \subset X \\
+      \implies d|_A(x, y) = d(x, y) \quad \forall x, y \in A
+    \end{gathered}
+  \end{equation}
+\end{multicols}
+\end{document}
