@@ -1,0 +1,82 @@
+\documentclass[12pt]{report}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\begin{document}
+\begin{equation}
+  \label{eq:initial}
+  m\ddot{r}_1 = k_0 \frac{qQ_1}{r_1^2} \implies
+  \left[\ddot{y} = Ky^{-2}\right] ~\wedge~ \left[K \equiv \frac{k_0qQ_1}{m} ~\wedge~ y \equiv r_1 \right]
+\end{equation}
+
+\begin{align*}
+  \ddot{y} = Ky^{-2} \implies
+  \ddot{y}\dot{y} = Ky^{-2}\dot{y} &\implies
+                                     \frac{1}{2}\dv{x}\left(\dot{y}\right)^2 = -\dv{x}\left(\frac{K}{y}\right) \\
+                                   &\implies \dv{x}\left(\frac{1}{2}\left(\dot{y}\right)^2 + \frac{K}{y}\right) = 0 \\
+                                   &\implies \frac{1}{2}\left(\dot{y}\right)^2 + \frac{K}{y} = v_0^2 \\
+                                   &\implies \dv{y}{x} = \sqrt{2}\sqrt{v_0^2 - \frac{K}{y}} \\
+                                   &\implies \int \frac{\text{d}y}{\sqrt{v_0^2 - K/y}} = (x - x_0)\sqrt{2}
+\end{align*}
+
+Soluzione generale
+\begin{equation}
+  \label{eq:general}
+  \begin{gathered}
+    \int \frac{\text{d}r}{\sqrt{v_0^2 - K/r(t)}} = (t - t_0)\sqrt{2} \\
+    \frac{K\tanh^{-1}\left(\frac{\sqrt{v_0^2-K/r(t)}}{v_0}\right)}{v_0^3} + \frac{r(t)\sqrt{v_0^2 - K/r(t)}}{v_0^2} = (t - t_0)\sqrt{2}
+  \end{gathered}
+\end{equation}
+
+Soluzione particolare nel caso $v_0 = 0$ e $t_0 = 0$
+\begin{equation}
+  \label{eq:general}
+  \begin{gathered}
+    \int \frac{\text{d}r}{\sqrt{-K/r(t)}} - r_0 = t\sqrt{2} \\
+    \frac{2r}{3\sqrt{-K/r}} - \frac{2r_0}{3\sqrt{-K/r_0}} = t\sqrt{2} \\
+    r(t) =
+    \begin{cases}
+      \left(\frac{-9K}{2}\right)^{1/3}t^{2/3} & \text{if} ~ r_0 = 0 \\
+      \left(\frac{-9K}{4}\right)^{1/3}\left(t\sqrt{2} + \frac{2r_0}{3\sqrt{-K/r_0}}\right)^{2/3} & \text{if} ~ r_0 > 0
+    \end{cases}
+  \end{gathered}
+\end{equation}
+
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = $t$,
+    ylabel = {$r(t)$},
+]
+
+\addplot [
+domain=0:1,
+samples=100, 
+color=blue,
+]
+{((9/2)*x^2)^(1/3)};
+\addlegendentry{$r_0=0~[\text{m}]$}
+
+\addplot [
+    domain=0:1,
+    samples=100, 
+    color=blue,
+]
+{((9/4)^(1/3))*(x*sqrt(2)+(2*0.5)/(3*sqrt(1/0.5)))^(2/3)};
+\addlegendentry{$r_0=0.5~[\text{m}]$}
+
+\addplot [
+    domain=0:1,
+    samples=100, 
+    color=blue,
+]
+{((9/4)^(1/3))*(x*sqrt(2)+(2*1)/(3*sqrt(1/1)))^(2/3)};
+\addlegendentry{$r_0=1~[\text{m}]$}
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

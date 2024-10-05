@@ -1,0 +1,137 @@
+\documentclass[12pt]{report}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+
+\title{Circuito ganzo}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Caso finito}
+Nelle schematiche ogni resistenza \'e di valore uguale noto $R$
+\begin{figure}[!ht]
+\centering
+\resizebox{0.6\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw (4.75,15) to[short, -o] (4.25,15) ;
+\draw (4.75,13) to[short, -o] (4.25,13) ;
+\draw (4.75,15) to[R] (6.75,15);
+\draw (4.75,13) to[R] (6.75,13);
+\draw (6.75,15) to[R] (6.75,13);
+\draw (6.75,15) to[R] (9.5,15);
+\draw (6.75,13) to[R] (9.5,13);
+\draw (9.5,15) to[R] (9.5,13);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+Un modo semplice di risolvere il circuito \'e quello di rappresentarlo in
+maniera diversa
+
+\begin{figure}[!ht]
+\centering
+\resizebox{0.8\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw (4,12.25) to[short, -o] (3.75,12.25) ;
+\draw (4,12.25) to[R] (6.5,12.25);
+\draw (6.5,13.25) to[short] (6.5,11.25);
+\draw (6.5,13.25) to[R] (8.25,13.25);
+\draw (8.25,13.25) to[R] (9.25,13.25);
+\draw (9.25,13.25) to[R] (11,13.25);
+\draw (6.5,11.25) to[R] (11,11.25);
+\draw (11,13.25) to[short] (11,11.25);
+\draw (11,12.25) to[R] (13.25,12.25);
+\draw (13.25,12.25) to[short, -o] (13.75,12.25) ;
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\begin{equation}
+  \label{sol:finito}
+  R_{eq} = R + \left(\frac{1}{R} + \frac{1}{3R}\right)^{-1} + R
+\end{equation}
+
+\chapter*{Caso infinito}
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw (4.75,15) to[short, -o] (4.25,15) ;
+\draw (4.75,13) to[short, -o] (4.25,13) ;
+\draw (4.75,15) to[R] (6.75,15);
+\draw (4.75,13) to[R] (6.75,13);
+\draw (6.75,15) to[R] (6.75,13);
+\draw (6.75,15) to[R] (9.5,15);
+\draw (6.75,13) to[R] (9.5,13);
+\draw (9.5,15) to[R] (9.5,13);
+\draw (9.5,15) to[R] (12.25,15);
+\draw (9.5,13) to[R] (12.25,13);
+\draw [dashed] (12.25,15) -- (12.25,13);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw (4,12.25) to[short, -o] (3.75,12.25) ;
+\draw (13.25,12.25) to[short, -o] (13.75,12.25) ;
+\draw (3.75,12.25) to[short] (3.75,9.75);
+\draw (13.75,12.25) to[short] (13.75,9.75);
+\draw (3.75,9.75) to[R] (13.75,9.75);
+\draw (1,11) to[short, -o] (0.75,11) ;
+\draw (1,11) to[R] (3.75,11);
+\draw (13.75,11) to[R] (16.25,11);
+\draw (16.25,11) to[short, -o] (16.5,11) ;
+\draw (0.75,11) to[short] (0.75,8);
+\draw (16.5,11) to[short] (16.5,8);
+\draw (0.75,8) to[R] (16.5,8);
+\draw (-1.75,9.5) to[short, -o] (-2,9.5) ;
+\draw (-1.75,9.5) to[R] (0.75,9.5);
+\draw (16.5,9.5) to[R] (18.75,9.5);
+\draw (18.75,9.5) to[short, -o] (19.5,9.5) ;
+\draw [dashed] (6.5,13.25) -- (6.5,11);
+\draw [dashed] (6.5,13.25) -- (11,13.25);
+\draw [dashed] (6.5,11) -- (11,11);
+\draw [dashed] (4,12.25) -- (6.5,12.25);
+\draw [dashed] (11,13.25) -- (11,11);
+\draw [dashed] (11,12.25) -- (13.25,12.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+
+\begin{equation}
+  \label{sol:infinito}
+  R_{eq, n+1} = R + \left(\frac{1}{R} + \frac{1}{R_{eq, n}}\right)^{-1} + R    
+\end{equation}
+
+Senza particolari accertezze matematiche \'e ragionevole per $n\to\infty$
+
+\begin{equation}
+  \label{sol:infinito}
+  \begin{gathered}
+    R_{eq} = R + \left(\frac{1}{R} + \frac{1}{R_{eq}}\right)^{-1} + R
+    \implies
+    (R_{eq} - 2R)(R+R_{eq}) = RR_{eq} \\
+    R_{eq} = (1 + \sqrt{3})R
+  \end{gathered}
+\end{equation}
+
+\end{document}
