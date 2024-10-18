@@ -1,0 +1,276 @@
+\include{packages}
+\include{definitions}
+\usepackage[english]{babel}
+
+
+\begin{document}
+
+\mychapter{Keywords}
+\begin{multicols}{3}
+  Discreteness,
+  diffraction,
+  coherence,
+  linear vector space,
+  discrete vectors,
+  spaces of functions,
+  linearly independent,
+  linearly dependent,
+  dimension of the space,
+  basis for the space,
+  inner product,
+  antilinear,
+  orthogonal,
+  norm (or lenght),
+  Schwwarz's inequality,
+  the triangle inequality,
+  orthonormal,
+  dual space,
+  linear functionals,
+  Riesz theorem,
+  Dirac's bra and ket notation,
+  linear operator,
+  operator equality,
+  operator associativity,
+  operator commutativity,
+  outer product,
+  self-adjoint,
+  Hermitian,
+  eigenvector,
+  eigenvalue,
+  degenerator eigenvectors,
+  orthonormal set of eigenvectors,
+  complete operators,
+  function of an operator,
+  projection operator,
+  Stieltjes integral,
+  measure,
+  spectral theorem,
+  Hilbert space,
+  commuting sets of operators,
+  convergent sum of vectors,
+  conjugate space,
+  nuclear space,
+  rigged Hilbert space,
+  generalized spectral theorem,
+  extended space,
+  probability operators: negation, conjunction and disjunction,
+  probability axioms,
+  mutually exclusive,
+  addition of probabilities for exclusive events,
+  Baye's theorem,
+  principle of inverse probability,
+  independence of an event,
+  statistical (or stochastic) independence,
+  interpretations of probability:
+  limit frequency interpretation, propensity interpretation,
+  inductive inference, propositions, objective and subjective interpretations,
+  binomail probability distribution,
+  Chebyshev's inequality,
+  theory of inductive inference,
+  most probable value,
+  first postulate,
+  dynamical variable,
+  linear operator,
+  particle preparation and measurement,
+  state,
+  observable,
+  state of preparation procedure,
+  state-ensemble association,
+  second postulate,
+  state operator,
+  statistical operator,
+  density matrix,
+  ensemble interpretation criticism,
+  non-negative operator,
+  strong second postulate,
+  strong first postulate,
+  general states,
+  pure states,
+  convex set,
+  convex combinations,
+  pure state operator,
+  state vector,
+  non-pure state,
+  probability distributions,
+  discrete spectrum,
+  eigenstates,
+  continuous spectrum,
+  state function,
+  filter function,
+  correspondence rules,
+  Wigner theorem,
+  infinitesimal unitary transformations,
+  generator of the family of unitary operators,
+  symmetries of space-time,
+  Galilei group,
+  exponential Hermitian generator,
+  pure displacements,
+  rotation transformation,
+  multiples of identity,
+  anti-symmetric commutators,
+  Jacobi identity,
+  commutation relations for the generators of the Galilei group of transformations,
+  identification of operators with dynamical variables,
+  free particle,
+  position operator,
+  velocity operator,
+  space displacement,
+  displacement in velocity space,
+  symmetry generators,
+  irreducible set,
+  spin,
+  Hamiltonian,
+  scalar potential,
+  vector potential,
+  mass,
+  momentum,
+  angular momentum,
+  energy,
+  Kronecker product,
+  knematically independent,
+  joint probability distribution,
+  statistical independence,
+  uncorrelated state,
+  Poisson bracket,
+  quantizing the classical system,
+  time (in)dependent Hermitian,
+  Schr\"odinger picture,
+  Heisenber picture,
+  Schr\"odinger operator,
+  Heisenber operator,
+  constant of motion,
+  stationary state,
+  representation,
+  coordinate representation,
+  position operator,
+  momentum operator,
+  Schr\"odinger wave equation,
+  probability flux,
+  singular point,
+  physically realizable states,
+  transmission coefficient,
+  vacuum tunneling,
+  work function,
+  scanning tunneling microscope,
+  path integral,
+  propagator,
+  action,
+  imaginary time,
+  canonical ensemble  
+\end{multicols}
+
+\begin{multicols}{3}
+  \mysection{Oscillatore armonico}
+  Scriviamo l'hamlitoniana
+  \begin{equation*}
+    \hat{H} = \frac{\hat{P}^2}{2m} + \frac{1}{2}m\omega^2\hat{X}^2
+  \end{equation*}
+  \'e conveniente riscalare gli operatori con le ``lunghezza del problema''
+  \begin{equation}
+    \label{eq:operatori-riscalati}
+    \begin{gathered}
+      % Come mai abbiamo riscalato in questa particolare maniera?
+      \hat{x} = \hat{X} / l_{\omega} ~, \quad l_{\omega} = \sqrt{\frac{\hbar}{m\omega}} \\
+      \hat{p} = \hat{P} / p_{\omega} ~, \quad p_{\omega} = \sqrt{m\omega\hbar}
+    \end{gathered}
+  \end{equation}
+  se sostituiamo le quantit\'a all'interno dell'hamiltoniana
+  \begin{equation}
+    \label{eq:hamiltoniana-riscalata}
+    \begin{gathered}
+      \hat{H} = E_{\omega}(\hat{p}^2 + \hat{x}^2) ~, \quad E_{\omega} = \frac{\hbar\omega}{2} \\
+      \left[\hat{X}, \hat{P}\right] = i\hbar \to \left[\hat{x}, \hat{p}\right] = i
+    \end{gathered}
+  \end{equation}
+
+  \begin{equation}
+    \begin{gathered}
+      % Perch\'e abbiamo definito questo operatore?
+      \hat{a} = \frac{1}{\sqrt{2}}\left(\hat{x} + i\hat{p}\right)
+      ~, \quad
+      \hat{a}^{\dagger} = \frac{1}{\sqrt{2}}\left(\hat{x} - i\hat{p}\right) \\
+      \hat{x} = \frac{1}{\sqrt{2}}(a + a^{\dagger})
+      ~, \quad
+      \hat{p} = \frac{1}{\sqrt{2}}(a - a^{\dagger})\\
+      [\hat{a}, \hat{a}^{\dagger}] = 1
+    \end{gathered}
+  \end{equation}
+
+  Riscriviamo l'hamiltoniana in termini dei nuovi operatori
+  \begin{align}
+    \begin{split}
+      \hat{H} &= E_{\omega}\left(a^{\dagger}a + aa^{\dagger}\right) \\
+              &= 2E_{\omega}\left(a^{\dagger}a + \frac{1}{2}\right) \\
+              &= \hbar\omega\left(\hat{N} + \frac{1}{2}\right)
+                ~, \quad \hat{N} \equiv a^{\dagger}a
+    \end{split}
+  \end{align}
+
+  tenere a mente
+  \begin{equation}
+    \label{eq:commutatori-a}
+    \left[\hat{N}, \hat{a}\right] = -\hat{a}
+    ~, \quad
+    \left[\hat{N}, \hat{a}^{\dagger}\right] = \hat{a}
+  \end{equation}
+
+  Soluzione:
+  \begin{equation}
+    \hat{N}\ket{\nu} = \nu\ket{\nu}
+  \end{equation}
+
+  \begin{enumerate}
+  \item Mostriamo che $\nu > 0$
+    \begin{equation}
+      \begin{gathered}
+        a\ket{\nu} \geq 0
+        ~\wedge~
+        \left[\bra{\nu}a^{\dagger}a\ket{\nu}
+        = \bra{\nu}\hat{N}\ket{\nu} = \nu\bra{\nu}\ket{\nu}\right] \\
+        \implies \nu \geq 0
+      \end{gathered}
+    \end{equation}
+
+  \item Cosa?
+    \begin{equation}
+      \begin{gathered}
+        \hat{N} \hat{a} \ket{\nu} = \hat{a}\nu\ket{\nu} \\
+        (\ref{eq:commutatori-a}) \implies \hat{N}\hat{a} = \hat{a}\hat{N} - \hat{a} \\
+        \hat{N}\hat{a}\ket{\nu} = \hat{a}\hat{N} - \hat{a}\ket{\nu} = (\nu - 1) \hat{a}\ket{\nu}
+      \end{gathered}
+    \end{equation}
+
+  \item C'\'e una contraddizione che pu\'o solo essere risolta da una condizione aggiuntiva
+    \begin{equation}
+      a\ket{0} = 0
+    \end{equation}
+
+  \item Dunque lo stato fondamentale
+    \begin{equation}
+      \hat{N}\ket{0} = 0
+    \end{equation}
+
+  \item Gli autovalori devono essere interi.
+
+  \item Lo spettro di $\hat{N}$ \'e dato dall'insieme dei numeri naturali.
+    \begin{equation}
+      \begin{gathered}
+        Na^\dagger\ket{\nu} = (a^\dagger + a^\dagger)\ket{\nu} = (\nu + 1)a^\dagger\ket{\nu} \\
+        \hat{H} = \hbar\omega\left(\hat{N}+\frac{1}{2}\right) = \hbar\omega\left(n+\frac{1}{2}\right)
+      \end{gathered}
+    \end{equation}
+  \end{enumerate}
+
+  \begin{equation}
+    \hat{H} = \hbar\omega\left(\hat{N} + \frac{1}{2}\right)
+    \to
+    E_n = \hbar\omega\left(n + \frac{1}{2}\right)
+  \end{equation}
+
+  \begin{equation}
+    a^+\ket{n} = \sqrt{n+1}\ket{n+1}
+  \end{equation}
+
+\end{multicols}
+
+\end{document}

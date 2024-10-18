@@ -1,69 +1,79 @@
 # Building
 all:
-	make elecmagn
-	make fluid
-	make geodiff
-	make mech
+	make axler
+	make ballentine
+	make batchelor
+	make circuito-infinito
+	make delia
+	make esplosione-coulombiana
+	make noteciampini
+	make noteconti
+	make notekonishi
+	make rosati
 
-elecmagn: src/elecmagn.tex
+axler: src/axler.tex
 	cd src/ && \
-	pdflatex -shell-escape elecmagn.tex && \
-	pdflatex -shell-escape elecmagn.tex
-	mv src/elecmagn.pdf .
+	pdflatex -shell-escape axler.tex && \
+	pdflatex -shell-escape axler.tex
+	mv src/axler.pdf .
 
-fluid: src/fluid.tex
+ballentine: src/ballentine.tex
 	cd src/ && \
-	pdflatex -shell-escape fluid.tex && \
-	pdflatex -shell-escape fluid.tex
-	mv src/fluid.pdf .
+	pdflatex -shell-escape ballentine.tex && \
+	pdflatex -shell-escape ballentine.tex
+	mv src/ballentine.pdf .
 
-geodiff: src/geodiff.tex
+batchelor: src/batchelor.tex
 	cd src/ && \
-	pdflatex -shell-escape geodiff.tex && \
-	pdflatex -shell-escape geodiff.tex
-	mv src/geodiff.pdf .
+	pdflatex -shell-escape batchelor.tex && \
+	pdflatex -shell-escape batchelor.tex
+	mv src/batchelor.pdf .
 
-mech: src/mech.tex
+circuito-infinito: src/circuito-infinito.tex
 	cd src/ && \
-	pdflatex -shell-escape mech.tex && \
-	pdflatex -shell-escape mech.tex
-	mv src/mech.pdf .
+	pdflatex -shell-escape circuito-infinito.tex && \
+	pdflatex -shell-escape circuito-infinito.tex
+	mv src/circuito-infinito.pdf .
 
+delia: src/delia.tex
+	cd src/ && \
+	pdflatex -shell-escape delia.tex && \
+	pdflatex -shell-escape delia.tex
+	mv src/delia.pdf .
+
+esplosione-coulombiana: src/esplosione-coulombiana.tex
+	cd src/ && \
+	pdflatex -shell-escape esplosione-coulombiana.tex && \
+	pdflatex -shell-escape esplosione-coulombiana.tex
+	mv src/esplosione-coulombiana.pdf .
+
+noteciampini: src/noteciampini.tex
+	cd src/ && \
+	pdflatex -shell-escape noteciampini.tex && \
+	pdflatex -shell-escape noteciampini.tex
+	mv src/noteciampini.pdf .
+
+noteconti: src/noteconti.tex
+	cd src/ && \
+	pdflatex -shell-escape noteconti.tex && \
+	pdflatex -shell-escape noteconti.tex
+	mv src/noteconti.pdf .
+
+notekonishi: src/notekonishi.tex
+	cd src/ && \
+	pdflatex -shell-escape notekonishi.tex && \
+	pdflatex -shell-escape notekonishi.tex
+	mv src/notekonishi.pdf .
+
+rosati: src/rosati.tex
+	cd src/ && \
+	pdflatex -shell-escape rosati.tex && \
+	pdflatex -shell-escape rosati.tex
+	mv src/rosati.pdf .
 
 # Cleaning
 clean:
-	make clean-temp
-	make clean-elecmagn
-	make clean-fluid
-	make clean-geodiff
-	make clean-mech
-
-clean-temp:
 	rm -f  src/*.pdf
 	rm -f  src/*.aux
 	rm -f  src/*.log
 	rm -rf src/_minted-*
-
-clean-elecmagn:
-	rm -f  elecmagn.pdf
-	rm -f  src/elecmagn/*.pdf
-	rm -f  src/elecmagn/*.aux
-	rm -f  src/elecmagn/*.log
-
-clean-fluid:
-	rm -f  fluid.pdf
-	rm -f  src/fluid/*.pdf
-	rm -f  src/fluid/*.aux
-	rm -f  src/fluid/*.log
-
-clean-geodiff:
-	rm -f  geodiff.pdf
-	rm -f  src/geodiff/*.pdf
-	rm -f  src/geodiff/*.aux
-	rm -f  src/geodiff/*.log
-
-clean-mech:
-	rm -f  mech.pdf
-	rm -f  src/mech/*.pdf
-	rm -f  src/mech/*.aux
-	rm -f  src/mech/*.log

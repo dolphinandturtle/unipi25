@@ -1,0 +1,213 @@
+\include{packages}
+\include{definitions}
+\usepackage[english]{babel}
+
+\begin{document}
+
+\mychapter{Keywords}
+\begin{multicols}{3}
+  Set operations:
+  member, inclusion, union, intersection, difference.
+  Map properties:
+  Injective/into, surjective/onto, bijection/one-to-one.
+  Equivalence relation, equivalence properties:
+  reflexivity, symmetry and transitivity.
+  Group axioms, non-commutative (or abelian) groups, discrete groups,
+  infinite groups, continuous groups, order of the group.
+  Group examples:
+  additive group $\whole$,
+  additive group $\reals$,
+  multiplicative group $\reals^+$,
+  permutations group $S_N$,
+  general linear group $GL(N, \complex)$ or $GL(N, \reals)$,
+  special linear group $SL(N, \complex)$ or $SL(N, \reals)$,
+  unitary group $U(N)$,
+  special unitary group $SU(N)$,
+  orthogonal group $O(N)$,
+  Symplectic group $Sp(2N, \reals)$ or $Sp(2N, \complex)$,
+  euclidean group $E_n$,
+  Lorentz group $SO(3, 1)$,
+  Poincar\'e group.
+
+  Ring axioms
+  Division ring
+  Field as commutative division ring
+  Continuous division rings
+
+  Subgroup condition
+  Invariant subgroup
+  Normal subgroup
+  Simple subgroup
+  Semi-simple subgroup
+  Group homomorphism
+  Kernel of homomorphism
+  Group isomorphism
+  Group automorphism
+  Group inner automorphism
+  Left coset
+
+  Representation
+  Equivalente representation
+  Unitary representation
+
+  Commutator
+  Center element of the group
+  Conjugacy class
+  Cyclic group
+  Dihedral group
+
+  Lie group axioms
+  Invariant integration
+  Haar measure
+  Group compactness
+
+  Lie algebras
+  Structure constants
+  Exponential parametrization
+  Jacobi identity
+  Adjoint representation
+  Invariant sub-algebra / ideal
+  Simple sub-algebra
+  Semi-simple sub-algebra
+  Algebra center
+  Cartan criterion
+  Killing form
+  Metric tensor
+  Casimir operators
+
+  Covering map
+  Sheets
+  Universal covering space
+
+  Conncted group as a manifold
+
+  Homotopy groups
+  Fundamental group / First homotopy group
+
+  Monodromy groups
+
+  Projective spaces
+
+  Higher homotopy groups
+
+  Hopf map
+
+  Representation theory
+  Representation space
+  Equivalent representations
+  Direct-product representation
+
+  (Ir)reducible representations
+
+  Unitary representations
+
+  (Pseudo-)Real/Complex representations
+
+  Shur's first lemma
+  Shur's second lemma
+
+  Character of a representation
+  Completeness of a representation
+
+  Isospin
+
+  Fundamental and adjoint representation
+  Construction of irreducible representations
+  Clebsh-Gordan coefficients
+
+  Quark model
+  Young tableaux
+  Weight vectors
+
+  From the Quark model to the contemporary theory of fundamental
+  interactions
+
+  Asymptotic freedom
+
+  Quark confinement
+
+  Coset construction
+
+  Induced representations
+
+  Spinor representations
+  Chiralities
+
+  Zero momentum states
+
+  Timelike momenta
+
+  Lightlike momenta
+
+  Root vectors
+  Simple root vectors
+  Recostruction from simple roots
+  Weight vectors
+
+  Dynkin diagrams
+\end{multicols}
+
+
+\begin{multicols}{3}
+  %pag 54
+  $$N(g^{-1}) = N^{-1}(g)$$
+  $$N_{lk}(g)^* = N_{kl}(g)^{\dagger} = N_{kl}(g^{-1})$$
+
+
+  Esempio:
+  \begin{equation}
+    \begin{gathered}
+      SO(2) \sim U(1) \\
+      M(g) = e^{im\phi}, \quad m = 0, \pm 1, \pm 2, ... \\
+      \int\text{d}g = \int \frac{\text{d}\phi}{2\pi} e^{im\phi}e^{-in\phi} = 
+      \begin{cases}
+        0 & \text{if}~m\neq n\\
+        1 & \text{if}~m=n
+      \end{cases}
+    \end{gathered}
+  \end{equation}
+
+  Esempio di completezza rappresentazione generica:
+  \begin{equation}
+    \begin{gathered}
+      SO(2) \sim U(1) \\
+      M(g) = e^{im\phi} \\
+      \sum_{m=-\infty}^{+\infty} e^{im\phi} e^{-im\phi'} = \delta(\phi-\phi')
+    \end{gathered}
+  \end{equation}
+
+  \begin{align*}
+    SU(2)& \to \text{isospin} \\
+    \begin{matrix}
+      SO(2) \\
+      \sim U(1)
+    \end{matrix}
+    &\to \text{quantum field theory} \\
+    SU(3)& \to \text{chromodinamica}
+  \end{align*}
+
+  Fisica nucleare:
+  \begin{enumerate}
+  \item $V_{pp} = V_{nn}\quad$ simmetria di carica
+  \item $V_{pp} = V_{nn} = V_{np}\quad$ invarianza di carica
+  \item $
+    \begin{bmatrix}
+      p \\
+      n
+    \end{bmatrix}
+    \to U
+    \begin{bmatrix}
+      p \\
+      n
+    \end{bmatrix}
+    \quad
+    $ Potenziale di Yukawa
+  \end{enumerate}
+
+  Isotopi:
+  $^{14}C \quad ^{14}N \quad ^{14}O$
+
+
+\end{multicols}
+
+\end{document}
