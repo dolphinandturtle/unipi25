@@ -1,3 +1,4 @@
+*.pdf
 src/*.pdf
 src/*.aux
 src/*.log

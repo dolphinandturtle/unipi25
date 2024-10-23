@@ -136,6 +136,8 @@
   93) Change-of-basis formula. Matrix of inverse equals inverse of matrix.
 \end{multicols}
 
+\pagebreak
+
 \mychapter{Propositions}
 \begin{multicols}{3}
   \mysection{subspaces}
@@ -150,7 +152,7 @@
   The set of all possible sums between elements of distinct subspaces.
   
   \mytheorem{Smallest subspace containing subspace}
-  The sum of a list of subspaces is the smallest subspace containing them individually.
+  The sum of subspaces is the smallest subspace containing them individually.
   
   \mydefinition{Direct sum}
   A sum of subspaces whose elements can be written as a unique sum.
@@ -159,38 +161,33 @@
   A sum of subspaces is direct if and only if its null vector can be written as a unique sum of null vectors.
 
   \mytheorem{Set condition for direct sum}
-  A sum between a pair of subspaces is direct if and only if only the additive identity is in their intersection.
+  A sum between a pair of subspaces is direct if and only if only the null vector is in their intersection.
 
   \mysection{span and linear independence}
   \mydefinition{Linear combination}
-  A sum on a list of vectors each individually scaled by some value.
+  A sum over a list of vectors each individually scaled by some value.
   
   \mydefinition{Span}
   The set of all linear combinations of a list of vectors.
   
   \mytheorem{Smallest vector containing subspace}
   The span of a list of vectors is the smallest subspace containing them.
-  
-  \mydefinition{Spanning}
-  Whose span is equal to.
-  
-  \mydefinition{Finite-dimensional vector space}
-  A vector space spanned by some list of vectors.
-  
+
   \mydefinition{Polynomial with scalar coefficients}
-  A function mapping field elements into themselves by summing coefficients multiplied by an element raised to the power of the coefficient's index.
+  A function mapping field elements into themselves by summing coefficients multiplied by the element raised to the power of the coefficient's index.
   
   \mydefinition{Degree of a polynomial}
   The greatest index of a non-zero coefficient.
   
-  \mydefinition{Infinite-dimensional vector space}
-  A vector space spanned by no list of vectors.
+  \mydefinition{Vector space cardinality}
+  \paragraph{\textbf{Finite-dimensional}}
+  A vector space spanned by some list of vectors.
+  \paragraph{\textbf{Infinite-dimensional}}
+  Not finite-dimensional.
   
-  \mydefinition{Linearly independent}
-  A list of vectors whose null linear combination implies all coefficients to be zero.
-  
-  \mydefinition{Linearly dependent}
-  A list of vectors whose null linear combination contains a coefficient that isn't zero.
+  \mydefinition{Linear dependence}
+  A list of vectors whose null linear combination implies all coefficients to be zero is \textit{linearly independent},
+  if not it is \textit{linearly dependent}.
 
   \mytheorem{Linear dependence lemma}
   In a list of linearly dependent vectors there exists a vector spanned by all other preceding vectors. Furthermore the span of the list with or without such vector is equivalent.
@@ -220,7 +217,7 @@
   \mytheorem{Subspace direct completion}
   For every subspace, in a finite-dimensional vector space there exists a complement such that their direct sum equals the whole space.
   
-  \mysection{Finite dimension}
+  \mysection{Dimension (finite)}
   \mytheorem{Basis lenght lemma}
   Any two bases of a vector space have the same lenght.
   
@@ -237,7 +234,7 @@
   A list of vectors whose lenght is equal to the full dimension and is linearly independent or spanning, is also a basis.
   
   \mytheorem{Dimension of a sum}
-  The dimension of their sum is the sum of their dimensions minus the dimension of their intersection.
+  The dimension of the sum between a pair of subspaces is the sum of their dimensions minus the dimension of their intersection.
 
 \end{multicols}
 
