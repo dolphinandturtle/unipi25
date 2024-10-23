@@ -1,9 +1,12 @@
 \include{packages}
 \include{definitions}
+\usepackage[english]{babel}
+
+
+\title{``Note del corso di geometria differenziale'' by Diego Conti}
 
 \begin{document}
-
-\section{``Note del corso di geometria differenziale'' by Diego Conti}
+\maketitle
 
 \begin{equation*}
   \boxed{
@@ -16,142 +19,172 @@
   \to \text{Curvatura}
 }
 \end{equation*}
-\\
-Spazi metrici e topologici.
-Metrica.
-Metrica/distanza indotta.
-Palle
-Intorni
-Aperti
-Sistema fondamentale di intorni
-Spazio topologico
-Topologia
-Chiusi
-Topologia di sottospazio
-Topologia discreta
-Topologia cofinita
-Base della topologia
-Spazio topologico di Hausdorff
-Spazio proiettivo
-Topologia quoziente
-Funzioni continue
-Abbreviazione di funzioni
-Funzioni di proiezione
-Omeomorfismo
-Connessioni e connessione per archi
-Spazio topologico connesso
-Intervalli connessi
-Cammino in uno spazio topologico
-Spazio topologico connesso per archi
-Pidocchio sul pettine
-Spazio topologico localmente connesso per archi
-Ricoprimento di uno spazio topologico
-Spazio toplogico compatto
-Atlante differenziabile
-Carte
-Cambiamento di carte
-Struttura differenziabile
-Variet\'a differenziabile
-Proiezione stereografica
-Coordinate omogenee
-Funzioni $C^\infty$
-Diffeomorfismo
-Spazio tangente
-Spazio differenziabile
-Vettore tangente
-Differenziale
-Fibrazione di Hopf
-Immersioni
-Sommersioni
-Sotto-variet\'a
-Punto regolare
-Valore regolare
-Embedding
-Fibrato tangente
-Derivazione
-Campi di vettori
-Sezione del fibrato tangente
-Campi di vettori locali
-Algebra di Lie
-Prodotto di Lie
-f-correlato
-Orbita
-Curva integrale
-Aperto radiale
-Flusso di un campo di vettori
-Gruppi di Lie
-Isomorfismo lineare
-Campo di vettori invariante a sinitra
-Sotto-gruppo
-Sotto-gruppo normale
-Sotto-gruppo analitico
-Quaternioni
-Prodotti tensoriali
-Algebra esterna
-Applicazione multi-lineare
-Bilineare
-Prodotto tensore
-Isomorfismo canonico
-Mappe multi-lineari alternanti
-Propriet\'a universale per mappe k-multilineari alternanti
-p-q shuffle
-Fibrato dei tensori
-Fibrato delle forme differenziali
-Contrazione del tensore
-K-forma differenziale
-Forma differenziale
-Algebra graduata
-Anti-derivazione
-Derivata esterna
-Pull-back
-Forma di volume
-Orientazione su una varit\'a
-Atlante orientato
-Orientazione standard
-Variet\'a con bordo
-Atlante con bordo
-Struttura differenziabile con bordo
-Spazio delle k-forme a supporto compatto
-Teorema di Stokes generalizzato
-Metrica pseudo-riemanniana
-Metrica lorentziana
-Vettori di tipo luce
-Variet\'a pseudo-riemanniana
-Equivalenza conforme
-Tensore di Weyl
-Inversione sferica
-Fibrati vettoriali
-Connessioni
-Derivata covariante
-Simboli di Christoffel
-Forma di connessione
-Connessione di Levi-Civita
-Geodetiche
-Mappa esponenziale
-Aperto stellato
-Intorno normale
-Coordinate normali
-Palla geodetica
-Lunghezza
-Lemma di Gauss
-Funzionale di energia
-Formula della variazione prima
-Variazione propria
-Teorema di Hopf-Rinow
-Spazio completo
-Completezza geodetica
-Tensore di Riemann
-Curvatura di superfici
-Curvatura sezionale
-Curvature principali
-Curvatura gaussiana
-Tensore di Weingarten
-Operatore di forma
-Equazione di Gauss
-Curvatura di Ricci
-Curvatura di Weyl
-Seconda identit\'a di Bianchi
-Teorema di Schur
-Tensore di Ricci
+
+
+\mychapter{Keywords}
+
+\begin{multicols}{3}
+  Spazi metrici e topologici,
+  metrica,
+  metrica/distanza indotta,
+  palle,
+  intorni,
+  aperti,
+  sistema fondamentale di intorni,
+  spazio topologico,
+  topologia,
+  chiusi,
+  topologia di sottospazio,
+  topologia discreta,
+  topologia cofinita,
+  base della topologia,
+  spazio topologico di hausdorff,
+  spazio proiettivo,
+  topologia quoziente,
+  funzioni continue,
+  abbreviazione di funzioni,
+  funzioni di proiezione,
+  omeomorfismo,
+  connessioni e connessione per archi,
+  spazio topologico connesso,
+  intervalli connessi,
+  cammino in uno spazio topologico,
+  spazio topologico connesso per archi,
+  pidocchio sul pettine,
+  spazio topologico localmente connesso per archi,
+  ricoprimento di uno spazio topologico,
+  spazio toplogico compatto,
+  atlante differenziabile,
+  carte,
+  cambiamento di carte,
+  struttura differenziabile,
+  variet\'a differenziabile,
+  proiezione stereografica,
+  coordinate omogenee,
+  funzioni $C^\infty$,
+  diffeomorfismo,
+  spazio tangente,
+  spazio differenziabile,
+  vettore tangente,
+  differenziale,
+  fibrazione di hopf,
+  immersioni,
+  sommersioni,
+  sotto-variet\'a,
+  punto regolare,
+  valore regolare,
+  embedding,
+  fibrato tangente,
+  derivazione,
+  campi di vettori,
+  sezione del fibrato tangente,
+  campi di vettori locali,
+  algebra di lie,
+  prodotto di lie,
+  f-correlato,
+  orbita,
+  curva integrale,
+  aperto radiale,
+  flusso di un campo di vettori,
+  gruppi di lie,
+  isomorfismo lineare,
+  campo di vettori invariante a sinitra,
+  sotto-gruppo,
+  sotto-gruppo normale,
+  sotto-gruppo analitico,
+  quaternioni,
+  prodotti tensoriali,
+  algebra esterna,
+  applicazione multi-lineare,
+  bilineare,
+  prodotto tensore,
+  isomorfismo canonico,
+  mappe multi-lineari alternanti,
+  propriet\'a universale per mappe k-multilineari alternanti,
+  p-q shuffle,
+  fibrato dei tensori,
+  fibrato delle forme differenziali,
+  contrazione del tensore,
+  k-forma differenziale,
+  forma differenziale,
+  algebra graduata,
+  anti-derivazione,
+  derivata esterna,
+  pull-back,
+  forma di volume,
+  orientazione su una varit\'a,
+  atlante orientato,
+  orientazione standard,
+  variet\'a con bordo,
+  atlante con bordo,
+  struttura differenziabile con bordo,
+  spazio delle k-forme a supporto compatto,
+  teorema di stokes generalizzato,
+  metrica pseudo-riemanniana,
+  metrica lorentziana,
+  vettori di tipo luce,
+  variet\'a pseudo-riemanniana,
+  equivalenza conforme,
+  tensore di weyl,
+  inversione sferica,
+  fibrati vettoriali,
+  connessioni,
+  derivata covariante,
+  simboli di christoffel,
+  forma di connessione,
+  connessione di levi-civita,
+  geodetiche,
+  mappa esponenziale,
+  aperto stellato,
+  intorno normale,
+  coordinate normali,
+  palla geodetica,
+  lunghezza,
+  lemma di gauss,
+  funzionale di energia,
+  formula della variazione prima,
+  variazione propria,
+  teorema di hopf-rinow,
+  spazio completo,
+  completezza geodetica,
+  tensore di riemann,
+  curvatura di superfici,
+  curvatura sezionale,
+  curvature principali,
+  curvatura gaussiana,
+  tensore di weingarten,
+  operatore di forma,
+  equazione di gauss,
+  curvatura di ricci,
+  curvatura di weyl,
+  seconda identit\'a di bianchi,
+  teorema di schur,
+  tensore di Ricci
+\end{multicols}
+
+\mychapter{Pages}
+\begin{multicols}{3}
+  1)
+\end{multicols}
+
+\mychapter{Propositions}
+\begin{multicols*}{3}
+  \mydefinition{Metric space}
+  A set paired with a \textit{metric} binary real function acting over it such that:
+  \begin{itemize}
+  \item Only equal elements map to zero.
+  \item The map is symmetric.
+  \item The triangle inequality holds.
+  \end{itemize}
+
+  \mydefinition{Topological space}
+  A set paired with a \textit{topology} containing its subsets relabled as \textit{open}, such that:
+  \begin{itemize}
+  \item The empty set and the whole set is open.
+  \item Arbitrary unions of opens is open.
+  \item Finite intersections of opens is open.
+  \end{itemize}
+
+\end{multicols*}
 
 \end{document}
