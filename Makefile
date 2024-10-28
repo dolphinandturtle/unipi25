@@ -10,6 +10,7 @@ all:
 	make noteconti
 	make notekonishi
 	make rosati
+	make ytnotes
 
 axler: src/axler.tex
 	cd src/ && \
@@ -70,6 +71,12 @@ rosati: src/rosati.tex
 	pdflatex -shell-escape rosati.tex && \
 	pdflatex -shell-escape rosati.tex
 	mv src/rosati.pdf .
+
+ytnotes: src/ytnotes.tex
+	cd src/ && \
+	pdflatex -shell-escape ytnotes.tex && \
+	pdflatex -shell-escape ytnotes.tex
+	mv src/ytnotes.pdf .
 
 # Cleaning
 clean:
