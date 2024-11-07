@@ -1,0 +1,56 @@
+\include{packages}
+\include{definitions}
+\usepackage[italian]{babel}
+
+\title{"Lezioni di Fisica Generale 2 by Luigi E. Picasso"}
+
+\begin{document}
+\maketitle
+
+\mychapter{Keywords}
+\begin{multicols}{3}
+  Legge di Coulomb. Convenzione di Franklin. Sistema di Gauss. Principio di sovvrapposizione.
+  Campo elettrico. Sorgente del campo. Teorie di campo. Linee di forza. Densit\'a di carica.
+  Integrale di Riemann. Coordinate sferiche. Angolo solido. Distribuzione di volume.
+  Distribuzione superficiale. Distribuzione lineare. Superifice orientabile. Flusso.
+  Portata del fluido.
+\end{multicols}
+
+\mychapter{Pages}
+\begin{multicols}{3}
+  \begin{enumerate}
+  \item Introduzione storica. Legge di Coulomb e interazioni a grandi distanze.
+  \item Convenzione di Franklin. Determinazione del fattore di proporzionalit\'a della legge di Coulomb.
+    Sistema di Gauss.
+  \item Scelta di sistema di u.m. Principio di sovvrapposizione e ipotesi per la legge di Coulomb.
+  \item Paragone con la legge di gravitazione. Conseguenze non fisiche della legge di Coulomb. Il campo elettrico e la proporzionalit\'a alla forza.
+  \item Definizione operativa del campo elettrico e preludio alle teorie di campo.
+  \item Linee di forza del campo e i loro punti singolari. Ipotesi di continuo e densit\'a di carica.
+  \item Scala fisica del volume ``piccolo''. Carica e campo elettrico totali.
+  \item Sistemi di coordinate per calcolo integrale sul volume.
+  \item Stabilit\'a del campo elettrico generato da un volume. Distribuzioni degeneri e le loro singolarit\'a.
+  \item Propriet\'a delle superfici e flusso.
+  \end{enumerate}
+\end{multicols}
+
+\mychapter{Propositions}
+\begin{multicols}{3}
+  \mydefinition{Legge di Coulomb}
+  \begin{equation}
+    \vec{F} \equiv k \frac{q_1q_2}{|\vec{r}|^2}\hat{r}
+  \end{equation}
+
+  \mydefinition{Campo elettrico}
+  Con $q_1$ \textit{sorgente del campo}.
+  \begin{equation}
+    \vec{E}_1(\vec{r}) \equiv k \frac{q_1}{|\vec{r} - \vec{r}_1|^3}(\vec{r} - \vec{r}_1)
+  \end{equation}
+  
+  \mydefinition{Flusso}
+  \begin{equation}
+    \Phi_S(\vec{F}) \equiv \int_S \vec{F} \cdot \text{d}\vec{S} \quad \vec{S} \equiv S\hat{n}
+  \end{equation}
+  
+\end{multicols}
+
+\end{document}
