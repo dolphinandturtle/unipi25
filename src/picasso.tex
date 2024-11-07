@@ -13,7 +13,8 @@
   Campo elettrico. Sorgente del campo. Teorie di campo. Linee di forza. Densit\'a di carica.
   Integrale di Riemann. Coordinate sferiche. Angolo solido. Distribuzione di volume.
   Distribuzione superficiale. Distribuzione lineare. Superifice orientabile. Nastro di Moebius. Flusso.
-  Portata del fluido.
+  Portata del fluido. Teorema di Gauss. Divergenza. Densit\'a di flusso. Teorema della divergenza.
+  Prima equazione di Maxwell. Tubo di flusso.
 \end{multicols}
 
 \mychapter{Pages}
@@ -29,7 +30,11 @@
   \item Scala fisica del volume ``piccolo''. Carica e campo elettrico totali.
   \item Sistemi di coordinate per calcolo integrale sul volume.
   \item Stabilit\'a del campo elettrico generato da un volume. Distribuzioni degeneri e le loro singolarit\'a.
-  \item Propriet\'a delle superfici e flusso.
+  \item Propriet\'a delle superfici. Definizione di flusso ed interpretazione.
+  \item Flusso del campo elettrico uscente dalla sfera. Spiegazione intuitiva del teorema di Gauss. Definizione di divergenza.
+  \item Additivit\'a del flusso. Teorema della divergenza.
+  \item Divergenza del campo elettrico di una carica puntiforme. Teorema di Gauss.
+  \item Relazione fra la legge di Gauss e la legge di Coulomb.
   \end{enumerate}
 \end{multicols}
 
@@ -48,9 +53,21 @@
   
   \mydefinition{Flusso}
   \begin{equation}
-    \Phi_S(\vec{F}) \equiv \int_S \vec{F} \cdot \text{d}\vec{S} \quad \vec{S} \equiv S\hat{n}
+    \Phi_S(\vec{F}) \equiv \int_S \vec{F} \cdot \text{d}\vec{S} \quad \vec{S} \equiv S\hat{n} \\
+  \end{equation}
+  il flusso di una velocit\'a pu\'o essere interpretato come il volume che attraversa la superficie per unit\'a di tempo.
+
+  \mydefinition{Divergenza}
+  \begin{equation}
+    \text{div}~\vec{F} \equiv \lim_{\Delta V \to 0} \frac{\Phi_V(\vec{F})}{\Delta V}
   \end{equation}
   
+  \mytheorem{Teorema della divergenza}
+  \begin{equation}
+    \text{div}~\vec{F} = \pdv{F_x}{x} + \pdv{F_y}{y} + \pdv{F_z}{z}
+  \end{equation}
+
+
 \end{multicols}
 
 \end{document}
