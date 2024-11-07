@@ -1,6 +1,7 @@
 # Building
 all:
 	make axler
+	make picasso
 	make ballentine
 	make batchelor
 	make circuito-infinito
@@ -17,6 +18,12 @@ axler: src/axler.tex
 	pdflatex -shell-escape axler.tex && \
 	pdflatex -shell-escape axler.tex
 	mv src/axler.pdf .
+
+picasso: src/picasso.tex
+	cd src/ && \
+	pdflatex -shell-escape picasso.tex && \
+	pdflatex -shell-escape picasso.tex
+	mv src/picasso.pdf .
 
 ballentine: src/ballentine.tex
 	cd src/ && \
