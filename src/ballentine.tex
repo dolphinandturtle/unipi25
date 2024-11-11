@@ -3,7 +3,11 @@
 \usepackage[english]{babel}
 
 
+\title{Quantum mechanics by Leslie E. Ballentine}
+
 \begin{document}
+
+\maketitle
 
 \mychapter{Keywords}
 \begin{multicols}{3}
@@ -159,118 +163,46 @@
   canonical ensemble  
 \end{multicols}
 
+\mychapter{Pages}
 \begin{multicols}{3}
-  \mysection{Oscillatore armonico}
-  Scriviamo l'hamlitoniana
-  \begin{equation*}
-    \hat{H} = \frac{\hat{P}^2}{2m} + \frac{1}{2}m\omega^2\hat{X}^2
-  \end{equation*}
-  \'e conveniente riscalare gli operatori con le ``lunghezza del problema''
-  \begin{equation}
-    \label{eq:operatori-riscalati}
-    \begin{gathered}
-      % Come mai abbiamo riscalato in questa particolare maniera?
-      \hat{x} = \hat{X} / l_{\omega} ~, \quad l_{\omega} = \sqrt{\frac{\hbar}{m\omega}} \\
-      \hat{p} = \hat{P} / p_{\omega} ~, \quad p_{\omega} = \sqrt{m\omega\hbar}
-    \end{gathered}
-  \end{equation}
-  se sostituiamo le quantit\'a all'interno dell'hamiltoniana
-  \begin{equation}
-    \label{eq:hamiltoniana-riscalata}
-    \begin{gathered}
-      \hat{H} = E_{\omega}(\hat{p}^2 + \hat{x}^2) ~, \quad E_{\omega} = \frac{\hbar\omega}{2} \\
-      \left[\hat{X}, \hat{P}\right] = i\hbar \to \left[\hat{x}, \hat{p}\right] = i
-    \end{gathered}
-  \end{equation}
-
-  \begin{equation}
-    \begin{gathered}
-      % Perch\'e abbiamo definito questo operatore?
-      \hat{a} = \frac{1}{\sqrt{2}}\left(\hat{x} + i\hat{p}\right)
-      ~, \quad
-      \hat{a}^{\dagger} = \frac{1}{\sqrt{2}}\left(\hat{x} - i\hat{p}\right) \\
-      \hat{x} = \frac{1}{\sqrt{2}}(a + a^{\dagger})
-      ~, \quad
-      \hat{p} = \frac{1}{\sqrt{2}}(a - a^{\dagger})\\
-      [\hat{a}, \hat{a}^{\dagger}] = 1
-    \end{gathered}
-  \end{equation}
-
-  Riscriviamo l'hamiltoniana in termini dei nuovi operatori
-  \begin{align}
-    \begin{split}
-      \hat{H} &= E_{\omega}\left(a^{\dagger}a + aa^{\dagger}\right) \\
-              &= 2E_{\omega}\left(a^{\dagger}a + \frac{1}{2}\right) \\
-              &= \hbar\omega\left(\hat{N} + \frac{1}{2}\right)
-                ~, \quad \hat{N} \equiv a^{\dagger}a
-    \end{split}
-  \end{align}
-
-  tenere a mente
-  \begin{equation}
-    \label{eq:commutatori-a}
-    \left[\hat{N}, \hat{a}\right] = -\hat{a}
-    ~, \quad
-    \left[\hat{N}, \hat{a}^{\dagger}\right] = \hat{a}
-  \end{equation}
-
-  Soluzione:
-  \begin{equation}
-    \hat{N}\ket{\nu} = \nu\ket{\nu}
-  \end{equation}
-
-  \begin{enumerate}
-  \item Mostriamo che $\nu > 0$
-    \begin{equation}
-      \begin{gathered}
-        a\ket{\nu} \geq 0
-        ~\wedge~
-        \left[\bra{\nu}a^{\dagger}a\ket{\nu}
-        = \bra{\nu}\hat{N}\ket{\nu} = \nu\bra{\nu}\ket{\nu}\right] \\
-        \implies \nu \geq 0
-      \end{gathered}
-    \end{equation}
-
-  \item Cosa?
-    \begin{equation}
-      \begin{gathered}
-        \hat{N} \hat{a} \ket{\nu} = \hat{a}\nu\ket{\nu} \\
-        (\ref{eq:commutatori-a}) \implies \hat{N}\hat{a} = \hat{a}\hat{N} - \hat{a} \\
-        \hat{N}\hat{a}\ket{\nu} = \hat{a}\hat{N} - \hat{a}\ket{\nu} = (\nu - 1) \hat{a}\ket{\nu}
-      \end{gathered}
-    \end{equation}
-
-  \item C'\'e una contraddizione che pu\'o solo essere risolta da una condizione aggiuntiva
-    \begin{equation}
-      a\ket{0} = 0
-    \end{equation}
-
-  \item Dunque lo stato fondamentale
-    \begin{equation}
-      \hat{N}\ket{0} = 0
-    \end{equation}
-
-  \item Gli autovalori devono essere interi.
-
-  \item Lo spettro di $\hat{N}$ \'e dato dall'insieme dei numeri naturali.
-    \begin{equation}
-      \begin{gathered}
-        Na^\dagger\ket{\nu} = (a^\dagger + a^\dagger)\ket{\nu} = (\nu + 1)a^\dagger\ket{\nu} \\
-        \hat{H} = \hbar\omega\left(\hat{N}+\frac{1}{2}\right) = \hbar\omega\left(n+\frac{1}{2}\right)
-      \end{gathered}
-    \end{equation}
-  \end{enumerate}
-
-  \begin{equation}
-    \hat{H} = \hbar\omega\left(\hat{N} + \frac{1}{2}\right)
-    \to
-    E_n = \hbar\omega\left(n + \frac{1}{2}\right)
-  \end{equation}
-
-  \begin{equation}
-    a^+\ket{n} = \sqrt{n+1}\ket{n+1}
-  \end{equation}
-
+  \myparagraph{1}
+  Scope of quantum mechanics, distinctive phenomena and origin of the name.
+  \myparagraph{2}
+  Phenomenon of discreteness: Franck Hertz experiment and Koch et al. hydrogen excited states.
+  \myparagraph{3}
+  Phenomenon of diffraction: Davisson and Germer experiment.
+  \myparagraph{4}
+  Particle wave duality and Tonomura et al. experiment.
+  \myparagraph{5}
+  Phenomenon of coherence: polarized beam splitting.
+  \myparagraph{6}
+  Introduction summary.
+  \myparagraph{7}
+  Connection with linear algebra and probability. Linear vector space.
+  \myparagraph{8}
+  Vector spaces examples. Linear dependence, dimension, basis and inner product definitions.
+  \myparagraph{9}
+  Inner product examples. Orthogonality. Schwartz inequality and triangular inequality. Orthonormality.
+  Dual space and linear functionals.
+  \myparagraph{10}
+  Riesz theorem with proof.
+  \myparagraph{11}
+  Dirac's ``bra'' and ``ket'' notation. Linear operators.
+  \myparagraph{12}
+  Operator properties. Example: column vector operators.
+  \myparagraph{13}
+  Example: function spaces operators.
+  \myparagraph{14}
+  Adjoint operator and outer product.
+  \myparagraph{15}
+  Trace of an operator.
+  
 \end{multicols}
+
+\mychapter{Propositions}
+\begin{multicols}{3}
+  
+\end{multicols}
+
 
 \end{document}
