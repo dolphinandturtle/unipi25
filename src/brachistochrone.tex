@@ -6,11 +6,59 @@
 \begin{document}
 
 
-\begin{multicols*}{3}
+\begin{multicols}{3}
   \mysection{Calcolo frazionario}
   \mydefinition{Funzione gamma}
+  La \textit{funzione gamma} \'e un estensione nota della successione fattoriale dall'insieme dei numeri
+  \textit{naturali} a quello dei \textit{reali positivi} (anche \textit{reali} e \textit{complessi}).
+  A partire dalla definizione ricorsiva di fattoriale si potrebbe provare a risolvere tale espressione
+  funzionale per determinarne la funzione generale per $x > 0$.
+  \footnote{\url{https://it.wikipedia.org/wiki/Funzione_Gamma}}
+  \begin{align}
+    \label{eq:gamma-implicit}
+    \begin{split}
+      f(1) &= 1 \\
+      f(x+1) &= xf(x)
+    \end{split}
+  \end{align}
+  una funzione che soddisfa questa propriet\'a \'e la nota funzione gamma; lo si verifica direttamente
+  \textit{integrando per parti}
+  \begin{equation}
+    \label{eq:gamma-function}
+    \boldsymbol{\Gamma(x)} = \int_0^{+\infty}t^{x-1}e^{-t} \dd{t}
+  \end{equation}
+  \'e importante chiedersi per\'o se questa funzione \'e unica o se ne esistono altre, ma per mezzo del
+  teorema di \textit{Bohr-Mollerup}
+  \footnote{\url{https://en.wikipedia.org/wiki/Bohr-Mollerup_theorem}}
+  se si aggiunge il vincolo aggiuntivo di ``super-convessit\'a''
+  \begin{equation}
+    \label{eq:super-convexity}
+    y(x) = \ln f(x) \quad \text{\'e convessa}
+  \end{equation}
+  allora il teorema garantisce che la funzione \'e univocamente determinata, ovvero tutte le sue
+  ``rappresentazioni'' sono equivalenti fra cui molte quella appena data da $\Gamma(x)$.
+
   \mydefinition{Integrale frazionario}
+  La definizione di integrale frazionario \'e un estensione all'operatore d'integrale sensata se
+  si \'e a conoscienza della \textit{formula di Cauchy per integrali ripetuti}
+  \footnote{\url{https://en.wikipedia.org/wiki/Cauchy_formula_for_repeated_integration}}
+  (si verifica direttamente per induzione)
+  \begin{equation}
+    \label{eq:cauchy-formula}
+    I^n[f](x, x_0) = \frac{1}{(n-1)!} \int_{x_0}^x (x-t)^{n-1}f(t)\dd{t}
+  \end{equation}
+  la forma chiusa banalmente permette di evitare i problemi di unicit\'a che si incontrarono definendo
+  la \textit{funzione gamma}, le funzioni che hanno ad argomento un numero naturale possono ora essere
+  estese
+  \begin{equation}
+    \label{eq:cauchy-formula}
+    I^n[f](x, x_0) = \frac{1}{\Gamma(n-1)} \int_{x_0}^x (x-t)^{n-1}f(t)\dd{t}
+  \end{equation}
+
   \mydefinition{Derivata frazionaria}
+  Rispetto all'estensione dell'integrale ripetuto, per il quale esisteva una forma chiusa che
+  ``disaccoppiava'' il termine iterativo dall'operatore, la derivata ripetuta non presenta
+  immediatamente una tale convenienza.
   
   \mysection{Problema della Brachistocrona}
   La legge di conservazione dell'energia in per un corpo un punto materiale in caduta libera pu\'o essere
@@ -43,6 +91,6 @@
     \dv{x}{y} = \sqrt{\frac{K^2}{y} - 1} ~, \quad K \equiv \frac{T_0\sqrt{2g}}{\pi}
   \end{equation}
 
-\end{multicols*}
+\end{multicols}
 
 \end{document}
