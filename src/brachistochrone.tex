@@ -1,0 +1,48 @@
+\include{packages}
+\include{definitions}
+\usepackage[italian]{babel}
+
+
+\begin{document}
+
+
+\begin{multicols*}{3}
+  \mysection{Calcolo frazionario}
+  \mydefinition{Funzione gamma}
+  \mydefinition{Integrale frazionario}
+  \mydefinition{Derivata frazionaria}
+  
+  \mysection{Problema della Brachistocrona}
+  La legge di conservazione dell'energia in per un corpo un punto materiale in caduta libera pu\'o essere
+  riscritta in forma infinitesimale abbusando la notazione dell'operatore di derivata
+  \begin{equation}
+    \begin{gathered}
+      \frac{1}{2}m\left(\dv{l}{t}\right)^2 + mg(y-y_0) = 0 \\
+      \text{d}t = \frac{1}{\sqrt{2g}}\frac{1}{\sqrt{y_0 - y}}\text{d}l
+    \end{gathered}
+  \end{equation}
+  quest'ultima espressione pu\'o essere riscritta in forma integrale standard, ma lo si fa in termini della
+  variabile $y$ perch\'e questo permetter\'a di esplicitare la sua forma frazionaria
+  \begin{equation}
+    \begin{gathered}
+      T(y_0) = \frac{1}{\sqrt{2g}} \int_{0}^{y_0} \frac{1}{\sqrt{y_0 - y}}\dv{l}{y}\text{d}y \\
+      \frac{T(y_0)}{\Gamma(1/2)} = \frac{1}{\sqrt{2g}}\frac{1}{\Gamma(1/2)}\int_{0}^{y_0} (y_0 - y)^{\frac{1}{2}-1}\dv{l}{y}\text{d}y \\
+      T_0\sqrt{\frac{2g}{\pi}} = I^{\frac{1}{2}}\left(\dv{l}{y}\right)
+    \end{gathered}
+  \end{equation}
+  quest'ultima espressione pu\'o essere ulteriormente semplificata utilizzando la derivata frazionaria,
+  in questo caso molto semplice da calcolare dato il termine costante a sinistra.
+  \begin{equation}
+    \begin{gathered}
+      D^{\frac{1}{2}}\left(T_0\sqrt{\frac{2g}{\pi}}\right) = D^{\frac{1}{2}}\left(I^{\frac{1}{2}}\left(\dv{l}{y}\right)\right) \\
+      T_0\sqrt{\frac{2g}{\pi}}\frac{1}{\sqrt{y}} = \dv{l}{y} \\
+    \end{gathered}
+  \end{equation}
+  a questo punto il problema \'e risolto e si ricava da semplici passaggi algebrici l'equazione della brachistocrona, una cicloide.
+  \begin{equation}
+    \dv{x}{y} = \sqrt{\frac{K^2}{y} - 1} ~, \quad K \equiv \frac{T_0\sqrt{2g}}{\pi}
+  \end{equation}
+
+\end{multicols*}
+
+\end{document}
