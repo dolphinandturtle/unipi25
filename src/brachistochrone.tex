@@ -77,15 +77,16 @@
   \begin{equation}
     \begin{gathered}
       \dv{x}\dv{x}\int f(x)\dd{x} = \dv{x}f(x) \\
-      \left(\dv{x}\right)^1 \prescript{}{\frac{1}{2}}{\int f(x)\dd{x}} = \left(\dv{x}\right)^{\frac{1}{2}} f(x)
+      \left(\dv{x}\right)^1 \prescript{}{\frac{1}{2}}{\int f(x)\dd{x}} = \left(\dv{x}\right)^{1 - \frac{1}{2}} f(x)
     \end{gathered}
   \end{equation}
   effettivamente si pu\'o verificare che quest'ultima \'e ben definita e rispetta il teorema fondamentale del
   calcolo integrale
   \begin{equation}
+    \label{eq:half-operators}
     \begin{gathered}
       D^{-\frac{1}{2}}f(x) = \frac{1}{\sqrt{\pi}} \int_{x_0}^x \frac{1}{\sqrt{(x-t)}} f(t)\dd{t} \\
-      D^{\frac{1}{2}} f(x) \equiv \left(\dv{x}\right)^{\frac{1}{2}} f(x) = D^{-\frac{1}{2}} f(x)
+      D^{\frac{1}{2}} \equiv \left(\dv{x}\right)D^{-\frac{1}{2}}
     \end{gathered}
   \end{equation}
   generalizzando questo ragionamento si ottiene la \textit{derivata di Riemann-Liouville}
@@ -115,7 +116,7 @@
     \end{gathered}
   \end{equation}
   quest'ultima espressione pu\'o essere riscritta in forma integrale standard, ma lo si fa in termini della
-  variabile $y$ perch\'e questo permetter\'a di esplicitare la sua forma frazionaria
+  variabile $y$ perch\'e questo permetter\'a di esplicitare la sua forma frazionaria (\ref{eq:half-operators})
   \begin{equation}
     \begin{gathered}
       T(y_0) = \frac{1}{\sqrt{2g}} \int_{0}^{y_0} \frac{1}{\sqrt{y_0 - y}}\dd{l} \\
@@ -123,7 +124,7 @@
       T_0\sqrt{\frac{2g}{\pi}} = D^{-\frac{1}{2}}\left(\dv{l}{y}\right)
     \end{gathered}
   \end{equation}
-  quest'ultima espressione pu\'o essere ulteriormente semplificata utilizzando la derivata frazionaria,
+  quest'ultima espressione pu\'o essere ulteriormente semplificata utilizzando la derivata frazionaria (\ref{eq:half-operators}),
   in questo caso molto semplice da calcolare dato il termine costante a sinistra.
   \begin{equation}
     \begin{gathered}
