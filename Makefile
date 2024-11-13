@@ -11,6 +11,7 @@ all:
 	make noteconti
 	make notekonishi
 	make rosati
+	make brachistochrone
 	make ytnotes
 
 axler: src/axler.tex
@@ -78,6 +79,12 @@ rosati: src/rosati.tex
 	pdflatex -shell-escape rosati.tex && \
 	pdflatex -shell-escape rosati.tex
 	mv src/rosati.pdf .
+
+brachistochrone: src/brachistochrone.tex
+	cd src/ && \
+	pdflatex -shell-escape brachistochrone.tex && \
+	pdflatex -shell-escape brachistochrone.tex
+	mv src/brachistochrone.pdf .
 
 ytnotes: src/ytnotes.tex
 	cd src/ && \
