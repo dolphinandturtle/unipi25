@@ -13,6 +13,7 @@ all:
 	make rosati
 	make brachistochrone
 	make ytnotes
+	make sparse
 
 axler: src/axler.tex
 	cd src/ && \
@@ -91,6 +92,12 @@ ytnotes: src/ytnotes.tex
 	pdflatex -shell-escape ytnotes.tex && \
 	pdflatex -shell-escape ytnotes.tex
 	mv src/ytnotes.pdf .
+
+sparse: src/sparse.tex
+	cd src/ && \
+	pdflatex -shell-escape sparse.tex && \
+	pdflatex -shell-escape sparse.tex
+	mv src/sparse.pdf .
 
 # Cleaning
 clean:
