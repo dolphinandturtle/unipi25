@@ -143,131 +143,134 @@
   \mysection{Vector spaces}
 
   \mydefinition{Complex numbers}
-  Ordered pairs of real numbers with addition and multiplication rules.
-  Informally represented as a sum between a scalar and a scaled root of the negative scalar unit.
-  Addition and multiplication rules are consistent with the informal definition.
+  Ordered pairs of real numbers with addition and multiplication rules consistent with
+  the algebra of a sum between a number and a scaled \textit{root of the negative unit}.
 
   \mytheorem{Properties of complex arithmetic}
   Commutativity, associativity, identities, inverses and distributive.
 
   \mydefinition{Complex subtraction and division}
-  Subtracting and dividing are respectively adding and multiplying by the respective inverse.
+  Subtracting and dividing are respectively adding and multiplying by the respective \textit{inverse}.
 
   \mydefinition{List of lenght}
-  A finite set with an ordering.
+  A \textit{finite} set with an \textit{ordering}.
 
-  \mydefinition{N-Coordinate space}
-  The set of scalar lists of lenght N.
-  \myparagraph{Addition} Element-wise addition.
-  \myparagraph{Additive identity} List of zeros.
-  \myparagraph{Additive inverse} List with elements of opposite sign.
-  \myparagraph{Scalar multiplication} List of scaled elements.
+  \mydefinition{Coordinate space}
+  The set of scalar lists of a given lenght.
 
-  \mydefinition{Vector operations}
-  \myparagraph{Addition} \textit{Element pair} mapping into an element.
-  \myparagraph{Scalar multiplication} \textit{Scalar, element pair} mapping into an element.
+  \mydefinition{Coordinate addition}
+  A map from a list pair into a list with \textit{corresponding elements added}.
+
+  \mydefinition{Coordinate identity}
+  List of \textit{zeros}.
+
+  \mydefinition{Coordinate inverse}
+  A list endo-map that inverts the \textit{sign} of each element.
+
+  \mydefinition{Coordinate scaling}
+  A map from a scalar and list pair into a list with each element scaled.
+
+  \mydefinition{Vector addition}
+  A map from a space to \textit{its} endomorphisms.
+  \mydefinition{Vector scalar multiplication}
+  A map from a \textit{field} to the endomorphisms of a space.
 
   \mydefinition{Vector space}
   An \textit{abelian group} under addition with a \textit{ring homomorphism} from a \textit{field} into the group's \textit{endomorphism ring} as scalar multiplication.
 
   \mydefinition{Vector}
-  An element of a vector space.
+  An \textit{element} of a vector space.
 
   \mydefinition{Standard vector spaces}
-  \myparagraph{Real} A vector space with scalar multiplication defined over the reals.
-  \myparagraph{Complex} A vector space with scalar multiplication defined over the complex.
+  A \textit{real vector space's} scalar multiplication is over the \textit{reals},
+  a \textit{complex vector space's} scalar multiplication is over the \textit{complexes}.
 
   \mytheorem{Vector space properties}
-  Identity and inverses are unique, null scaling and scaling null is null, identity inverse scaling is inverse.
+  Identity and inverses are unique. Null scaling and scaling null is null. Identity inverse scaling is inverse.
 
   \mysection{Subspaces}
   \mydefinition{Subspace}
-  A subset of a vector space that is also a vector space with the same additive identity, addition, and scalar multiplication.
+  A subset of a vector space that is also a vector space with the same \textit{additive identity} and \textit{operations}.
 
   \mytheorem{Conditions for a subspace}
-  A subset of a vector space is a subspace if and only if it contains the additive identity and is closed under addition and scalar multiplication.
+  A subset of a vector space is a subspace if and only if it contains the additive identity and is \textit{closed} under the operations.
 
   \mydefinition{Sum of subspaces}
-  The set of all the possible sums between elements of distinct subspaces.
+  The set of all \textit{sums between elements} of distinct subspaces.
   
   \mytheorem{Smallest subspace containing subspace}
   The sum of subspaces is the smallest subspace containing them individually.
   
   \mydefinition{Direct sum}
-  A sum of subspaces whose elements can be written as a unique sum.
+  A sum of subspaces whose elements can be written as a \textit{unique sum}.
   
   \mytheorem{Linear condition for direct sum}
-  A sum of subspaces is direct if and only if its null vector can be written as a unique sum of null vectors.
+  A sum of subspaces is direct if and only if its \textit{null vector} can be written as a unique sum of null vectors.
 
   \mytheorem{Set condition for direct sum}
-  A sum between a pair of subspaces is direct if and only if their intersection is trivial.
+  A sum between a pair of subspaces is direct if and only if their \textit{intersection is trivial}.
 
   \mysection{Span and linear independence}
-  \mydefinition{Linear combination}
-  A sum over a list of vectors each individually scaled by some value.
+  \mydefinition{Linear combination of vectors}
+  A \textit{sum} over a list of vectors each individually \textit{scaled} by some value.
   
   \mydefinition{Span}
-  The set of all linear combinations of a list of vectors.
+  The set of all \textit{linear combinations} of a list of vectors.
   
   \mytheorem{Smallest vector containing subspace}
   The span of a list of vectors is the smallest subspace containing them.
 
   \mydefinition{Polynomial with scalar coefficients}
-  A function mapping field elements into themselves by summing coefficients multiplied by the element raised to the power of the coefficient's index.
+  A field endo-map that sums over elements raised to increasing \textit{whole powers} and \textit{scaled} by some value.
   
   \mydefinition{Degree of a polynomial}
-  The greatest index of a non-zero coefficient.
+  The \textit{greatest power} taken on an element not scaled by zero.
   
-  \mydefinition{Vector space cardinality}
-  \paragraph{\textbf{Finite-dimensional}}
-  A vector space spanned by some list of vectors.
-  \paragraph{\textbf{Infinite-dimensional}}
-  Not finite-dimensional.
+  \mydefinition{Cardinality}
+  A vector space \textit{spanned} by some list of vectors is \textit{finite-dimensional}, if not then \textit{infinite-dimensional}.
   
   \mydefinition{Linear dependence}
   A list of vectors whose null linear combination implies all coefficients to be zero is \textit{linearly independent},
   if not then \textit{linearly dependent}.
 
   \mytheorem{Linear dependence lemma}
-  Some in a linearly dependent list of vectors are in the span of their preceding, they don't affect the first span.
+  Some in a linearly dependent list of vectors are in the span of their preceding, \textit{they don't affect the first span}.
   
   \mytheorem{List lenght constraint}
-  In a finite-dimensional vector space, the lenght of a linearly independent list cannot be greater than that of a spanning list.
+  In a finite-dimensional vector space, the lenght of a linearly independent list \textit{cannot be greater} than that of a spanning list.
   
   \mytheorem{Finite-dimensional subspace}
   A subspace of a finite-dimensional vector space is finite-dimensional.
   
   \mysection{Bases}
   \mydefinition{Basis of a vector space}
-  A list of vectors that is linearly independent and that spans their vector space.
+  A list of vectors that is linearly \textit{independent} and that \textit{spans} their vector space.
   
   \mytheorem{Criterion for basis}
-  A list of vectors is a basis if and only if every other vector can be written as a unique linear combination of it.
+  A list of vectors is a basis if and only if every other vector can be written as a \textit{unique linear combination} of it.
   
   \mytheorem{List resizing to a basis}
-  \paragraph{\textbf{Reduction}}
-  Spanning lists of vectors can be reduced to a basis.
-  \paragraph{\textbf{Extension}}
-  Linearly independent lists of vectors, in a finite-dimensional vector space, can be extended to a basis.
+  Spanning lists of vectors can be \textit{reduced} to a basis. Linearly independent lists of vectors, in a finite-dimensional
+  vector space, can be \textit{extended} to a basis.
 
   \mytheorem{Finite-dimensional vector space basis}
   Finite-dimensional vector spaces have a basis.
   
   \mytheorem{Subspace direct completion}
-  For every subspace, in a finite-dimensional vector space there exists a complement such that their direct sum equals the whole space.
+  For every subspace, in a finite-dimensional vector space there exists a \textit{complement} such that their direct sum equals the whole space.
   
   \mysection{Dimension (finite)}
   \mytheorem{Basis lenght lemma}
-  Any pair of bases of a vector space have the same lenght.
+  Any pair of bases of a vector space have the \textit{same lenght}.
   
   \mydefinition{Dimension of a vector space}
-  The lenght of any basis of the vector space.
+  The \textit{lenght} of any basis of the vector space.
   
   \mytheorem{Dimension of a subspace}
-  The dimension of a subspace cannot be greater than the dimension of the whole space.
+  The dimension of a subspace \textit{cannot be greater} than the dimension of the whole space.
   
   \mytheorem{Full dimension subspace}
-  A subspace whose dimension is equal to that of its whole space, is the whole space itself.
+  A subspace whose dimension is \textit{equal} to that of its whole space, is the whole space itself.
   
   \mytheorem{Basis lenght list}
   A list of vectors whose lenght is equal to the full dimension and is linearly independent or spanning, is also a basis.
@@ -277,43 +280,43 @@
 
   \mysection{Linear maps}
   \mydefinition{Linear map}
-  An additive and homogeneous map between two vector spaces.
+  A group endomorphism over addition that commutes with scalar multiplication.
 
   \mytheorem{Linear map lemma}
   Elements of a basis can be linearly mapped to anything, and the map is unique.
 
   \mydefinition{Linear map vector operations}
-  The sum of maps gives the sum of the mappings and the scaled map gives the mapping scaled.
+  Map addition and scalar multiplication is \textit{pointwise}.
   
   \mytheorem{Linear maps space structure}
-  The space of linear maps with map addition and scalar multiplication is a vector space.
+  The space of linear maps with map addition and scalar multiplication is a \textit{vector space}.
 
   \mydefinition{Product of linear maps}
-  The product of maps gives the multiplier mapping of the multiplicand mapping.
+  The product of maps gives their \textit{composition}.
 
   \mytheorem{Algebraic properties of products of linear maps}
-  Associativity, identity and distributivity with addition.
+  Associativity, identity and distributivity over addition.
 
   \mytheorem{Mapped null}
   Null vectors are linearly mapped into themselves.
 
   \mydefinition{Null space}
-  The set of elements mapped into null by a given linear map.
+  The set of elements mapped into \textit{null vectors} by a given linear map.
 
   \mytheorem{Null space structure}
-  The null space is a subspace of the domain of a linear map.
+  The null space is a \textit{subspace} of the domain of a linear map.
 
   \mydefinition{Injective}
-  A map whose distinct elements are distinctly mapped.
+  A map whose distinct elements are \textit{distinctly mapped}.
 
   \mytheorem{Injective linear map}
   A linear map is injective if and only if the null space is trivial.
 
   \mydefinition{Range}
-  The set of elements mapped by a given linear map.
+  The set of elements \textit{mapped} by a given linear map.
 
   \mytheorem{Range structure}
-  The range is a subspace of the codomain of a linear map.
+  The range is a subspace of the \textit{codomain} of a linear map.
 
   \mydefinition{Surjective}
   A map whose range equals its codomain.
@@ -326,10 +329,10 @@
 
   \mytheorem{Solution of linear systems}
   \paragraph{\textbf{Homogeneous}}
-  A system of linear equations with more variables than equations and null costant terms, has non-zero solutions.
+  A system of linear equations with more variables than equations and null costant terms, has \textit{non-zero solutions}.
   
   \paragraph{\textbf{Eterogeneous}}
-  A system of linear equations with more equation than variables has no solution for some choice of constant terms.
+  A system of linear equations with more equation than variables has \textit{no solution} for some choice of constant terms.
   
   \mysection{Matrices}
   \mydefinition{Matrix}
