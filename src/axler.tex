@@ -325,7 +325,7 @@
   A linear map's domain dimension is equal to the sum between the dimensions of its null space and range.
 
   \mytheorem{Linear maps dimension}
-  A linear mapping into a lower dimension is not injective, while into a higher dimension is not surjective.
+  In matters of dimension, higher isn't \textit{into} lower and lower isn't \textit{onto} higher.
 
   \mytheorem{Solution of linear systems}
   \paragraph{\textbf{Homogeneous}}
@@ -336,36 +336,40 @@
   
   \mysection{Matrices}
   \mydefinition{Matrix}
-  A list of \textit{row} and \textit{column} lists of scalars referenced by a respective pair of coefficients.
+  A whole rectangle of numbers with a \textit{row-column} index pair.
   
   \mydefinition{Linear map matrix form}
-  A matrix with each column related to a domain basis element, whose mapping can be expressed as a linear combination of the codomain basis with column entries as its coefficients.
+  Each column represents a \textit{mapped domain basis} as a linear combination of \textit{codomain basis} with column coefficients.
 
-  \mydefinition{Matrix vector operations}
-  \myparagraph{Addition}
-  For equal size matrices, the matrix with corresponding entries added.
-  \myparagraph{Scalar multiplication}
-  The matrix with its entries scaled.
+  \mydefinition{Matrix addition}
+  A map from a matrix pair into a matrix with \textit{corresponding elements added}.
+
+  \mydefinition{Matrix scaling}
+  A map from a scalar and matrix pair into a matrix with each element scaled.
   
-  \mytheorem{Matrix of a linear map vector operation}
-  Matrix form distributes over linear map operations.
+  \mytheorem{Matrix of a linear map operation}
+  Linear maps are \textit{homomorphic} to matrices over \textit{addition} and \textit{scalar multiplication}.
   
   \mytheorem{Matrix space structure}
-  The space of matrices of a given size with matrix addition and scalar multiplication is a vector space.
+  The space of matrices of a given size with matrix addition and scalar multiplication is a \textit{vector space}.
   
   \mytheorem{Dimension of a matrix}
   The number of rows times the number of columns.
+
+  \mydefinition{Matrix multiplication}
+  A map from a matrix pair into a matrix whose entries
+  sum over the entrywise product of the entry's row and column.
+
+
+  \mytheorem{Matrix of product of linear maps}
+  Linear maps are \textit{homomorphic} to matrices over \textit{multiplication}.
+
+  \mydefinition{Row and column matrices}
+  Respectively, a matrix with \textit{one row} and a matrix with \textit{one column}.
+
+  \mytheorem{Matrix multiplication characterizations}
+  An entry from a matrix multiplication is a multiplication between row and column matrices of the entries.
   
-  %\mydefinition{Matrix multiplication}
-  %Left fixed row, left moving column, right moving row, right fixed column.
-  %
-  %\mytheorem{Matrix of product of linear maps}
-  %The matrix of the product of linear maps is the product of matrices of the linear maps.
-  %
-  %\mydefinition{Row and column}
-  %By fixing a row index or a column index separately, a matrix can be respectively reduced to either a row or a column.
-  %
-  %\mytheorem{Matrix multiplication characterizations}
   %\paragraph{\textbf{Row column product}}
   %\paragraph{\textbf{Matrix times row/column}}
   %\paragraph{\textbf{Linear combination of rows/columns}}
