@@ -347,9 +347,6 @@
   \mydefinition{Matrix scaling}
   A map from a scalar and matrix pair into a matrix with each element scaled.
   
-  \mytheorem{Matrix of a linear map operation}
-  Linear maps are \textit{homomorphic} to matrices over \textit{addition} and \textit{scalar multiplication}.
-  
   \mytheorem{Matrix space structure}
   The space of matrices of a given size with matrix addition and scalar multiplication is a \textit{vector space}.
   
@@ -357,35 +354,57 @@
   The number of rows times the number of columns.
 
   \mydefinition{Matrix multiplication}
-  A map from a matrix pair into a matrix whose entries
-  sum over the entrywise product of the entry's row and column.
+  A map from matrix pairs to matrices of sums over the component-wise product of an entry's row and column.
 
 
-  \mytheorem{Matrix of product of linear maps}
-  Linear maps are \textit{homomorphic} to matrices over \textit{multiplication}.
+  Matrix multiplication isn't a element-local operation.
+  Matrix multiplication is defined by the first operand's rows and second operand's columns,
+  these are multiplied entrywise
+
+  A map from matrix pairs to matrices whose entries are defined by
+
+
+  sums over the component-wise product of row and column
+
+  row and column
+
+  sums over the component-wise product of a row and column
+
+  sums over
+  the component-wise product of
+  corresponding row a column.
+  
+
+  
+  \mytheorem{Conservation map operations}
+  Linear maps are \textit{homomorphic} to matrices over \textit{addition}, \textit{scaling} and \textit{multiplication}.
 
   \mydefinition{Row and column matrices}
   Respectively, a matrix with \textit{one row} and a matrix with \textit{one column}.
 
   \mytheorem{Matrix multiplication characterizations}
-  An entry from a matrix multiplication is a multiplication between row and column matrices of the entries.
+  The entry of a multiplication between matrices is a multiplication between
+  their corresponding entries' respective \textit{row and column matrices}.
+
+  \mytheorem{Matrix multiplication column}
+
+  \mytheorem{Linear combination of columns}
+
+  \mytheorem{Matrix multiplication as a linear combination}
+
+  \mydefinition{Column/row rank}
+  Dimension of the span of the columns/rows of a matrix.
+
+  \mydefinition{Transpose of a matrix}
+  A matrix automap that \textit{inverts} rows and columns.
+
+  \mytheorem{Column-row factorization}
+
+  \mytheorem{Row-column rank}
+
+  \mydefinition{Rank}
+  The column rank of a matrix.
   
-  %\paragraph{\textbf{Row column product}}
-  %\paragraph{\textbf{Matrix times row/column}}
-  %\paragraph{\textbf{Linear combination of rows/columns}}
-  %
-  %\mytheorem{Linear combination rows/columns}
-  %
-  %\mydefinition{Column/row rank}
-  %
-  %\mydefinition{Matrix transpose}
-  %
-  %\mytheorem{Column-row factorization}
-  %
-  %\mytheorem{Column rank equals row rank}
-  %
-  %\mydefinition{Rank}
-  %
   %\mysection{Invertibility and isomorphisms}
   %
   %\mydefinition{Linear map inverse}
