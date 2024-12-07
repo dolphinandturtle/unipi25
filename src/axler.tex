@@ -354,27 +354,8 @@
   The number of rows times the number of columns.
 
   \mydefinition{Matrix multiplication}
-  A map from matrix pairs to matrices of sums over the component-wise product of an entry's row and column.
-
-
-  Matrix multiplication isn't a element-local operation.
-  Matrix multiplication is defined by the first operand's rows and second operand's columns,
-  these are multiplied entrywise
-
-  A map from matrix pairs to matrices whose entries are defined by
-
-
-  sums over the component-wise product of row and column
-
-  row and column
-
-  sums over the component-wise product of a row and column
-
-  sums over
-  the component-wise product of
-  corresponding row a column.
-  
-
+  A map from matrix pairs to matrices where entries are sums over the component-wise product of
+  the pairs' row a column respectively.
   
   \mytheorem{Conservation map operations}
   Linear maps are \textit{homomorphic} to matrices over \textit{addition}, \textit{scaling} and \textit{multiplication}.
@@ -382,16 +363,23 @@
   \mydefinition{Row and column matrices}
   Respectively, a matrix with \textit{one row} and a matrix with \textit{one column}.
 
-  \mytheorem{Matrix multiplication characterizations}
-  The entry of a multiplication between matrices is a multiplication between
-  their corresponding entries' respective \textit{row and column matrices}.
+  \mytheorem{Matrix multiplication entry}
+  The sums over the product of the entry's row a column \textit{matrices}
+  respectively.
 
   \mytheorem{Matrix multiplication column}
+  The product between the matrix and the column's matrix respectively.
 
   \mytheorem{Linear combination of columns}
+  A matrix multiplication by a column matrix is a linear combination of the
+  matrix columns with column matrix coefficients.
 
   \mytheorem{Matrix multiplication as a linear combination}
-
+  A column entry from
+  the multiplication of a pair of matrices is
+  a linear combination of the columns
+  with column entry coefficients respectively.
+  
   \mydefinition{Column/row rank}
   Dimension of the span of the columns/rows of a matrix.
 
@@ -399,8 +387,12 @@
   A matrix automap that \textit{inverts} rows and columns.
 
   \mytheorem{Column-row factorization}
+  Every matrix with a column rank greater than zero
+  can be written as a matrix product between
+  a matrix of \textit{rank-width} and a matrix of \textit{rank-height}.
 
   \mytheorem{Row-column rank}
+  The column rank of a matrix \textit{equals} its row rank.
 
   \mydefinition{Rank}
   The column rank of a matrix.
