@@ -342,10 +342,10 @@
   Each column represents a \textit{mapped domain basis} as a linear combination of \textit{codomain basis} with column coefficients.
 
   \mydefinition{Matrix addition}
-  A map from a matrix pair into a matrix with \textit{corresponding elements added}.
+  Entrywise addition.
 
   \mydefinition{Matrix scaling}
-  A map from a scalar and matrix pair into a matrix with each element scaled.
+  Entrywise scaling.
   
   \mytheorem{Matrix space structure}
   The space of matrices of a given size with matrix addition and scalar multiplication is a \textit{vector space}.
@@ -354,31 +354,29 @@
   The number of rows times the number of columns.
 
   \mydefinition{Matrix multiplication}
-  A map from matrix pairs to matrices where entries are sums over the component-wise product of
-  the pairs' row a column respectively.
+  A map from matrix pairs onto matrices where entries are sums over the component-wise product of
+  the pair's row a column respectively.
   
   \mytheorem{Conservation map operations}
   Linear maps are \textit{homomorphic} to matrices over \textit{addition}, \textit{scaling} and \textit{multiplication}.
 
-  \mydefinition{Row and column matrices}
-  Respectively, a matrix with \textit{one row} and a matrix with \textit{one column}.
+  \mydefinition{Row/column matrices}
+  A matrix with \textit{one row/column}.
 
   \mytheorem{Matrix multiplication entry}
-  The sums over the product of the entry's row a column \textit{matrices}
-  respectively.
+  The product between the corresponding left and right entries' row and column \textit{matrices} respectively.
 
   \mytheorem{Matrix multiplication column}
-  The product between the matrix and the column's matrix respectively.
+  The product between the left matrix and the right corresponding column matrix respectively.
 
   \mytheorem{Linear combination of columns}
   A matrix multiplication by a column matrix is a linear combination of the
   matrix columns with column matrix coefficients.
 
   \mytheorem{Matrix multiplication as a linear combination}
-  A column entry from
-  the multiplication of a pair of matrices is
-  a linear combination of the columns
-  with column entry coefficients respectively.
+  Multiplication columns/rows can be written as the linear combinations of
+  left/right columns/rows with
+  the corresponding right/left column/row coefficients.
   
   \mydefinition{Column/row rank}
   Dimension of the span of the columns/rows of a matrix.
@@ -388,7 +386,7 @@
 
   \mytheorem{Column-row factorization}
   Every matrix with a column rank greater than zero
-  can be written as a matrix product between
+  can be written as a product between
   a matrix of \textit{rank-width} and a matrix of \textit{rank-height}.
 
   \mytheorem{Row-column rank}
@@ -396,49 +394,121 @@
 
   \mydefinition{Rank}
   The column rank of a matrix.
-  
-  %\mysection{Invertibility and isomorphisms}
-  %
-  %\mydefinition{Linear map inverse}
-  %
-  %\mytheorem{Inverse uniqueness}
-  %
-  %\mytheorem{Invertibility criterion}
-  %
-  %\mytheorem{Injectivity and surjectivity equivalence}
-  %
-  %\mytheorem{Identity map product}
-  %
-  %\mydefinition{Isomorphism}
-  %Invertible linear map.
-  %
-  %\mytheorem{Isomorphic dimension}
-  %A pair of finite-dimensional vector spaces are isomorphic if and only if their dimension is equal.
-  %
-  %\mytheorem{Linear map isomorphism}
-  %
-  %\mytheorem{Linear map dimension}
-  %
-  %\mydefinition{Matrix of a vector}
-  %
-  %\mytheorem{Columns of matrix as matrix of a vector}
-  %
-  %\mytheorem{Linear maps as matrix multiplications}
-  %
-  %\mytheorem{Range dimension on matrix}
-  %
-  %\mydefinition{Identity matrix}
-  %
-  %\mydefinition{Inverse matrix}
-  %
-  %\mytheorem{Matrix of product of linear maps}
-  %
-  %\mytheorem{Identity matrix with bases}
-  %
-  %\mytheorem{Change-of-basis formula}
-  %
-  %\mytheorem{Matrix of inverse}
 
+  \mysection{Isomorphisms}
+
+  \mydefinition{Inverse}
+  A linear map whose left and right product gives the identity map.
+
+  \mytheorem{Inverse choice}
+  For a given linear map the inverse is unique.
+
+  \mytheorem{Invertibility characterization}
+  A linear map is invertible if and only if it is injective and surjective.
+
+  \mytheorem{Injectivity/surjectivity/invertibility equivalence}
+  Injectivity, surjectivity and invertibility in a linear map between two spaces of equal \textit{finite-dimension} are all equivalent.
+
+  \mytheorem{Weak invertibility}
+  If the product of \textit{finite-dimensional} linear maps is the identity, the product \textit{commutes}.
+
+  \mydefinition{Isomorphism}
+  An invertible linear map.
+
+  \mytheorem{Isomorphism condition}
+  Vector spaces of equal finite-dimension are isomorphic.
+
+  \mytheorem{Linear maps and matrices}
+  For a given basis of the vector spaces acted upon, the \textit{matrix form} is an
+  \textit{isomorphism} from the space of linear maps to the space of matrices.
+
+  \mytheorem{Dimension of a linear map}
+  A linear maps dimension is the product between the dimension of its domain and codomain respectively.
+
+  \mydefinition{Matrix of a vector}
+  Given a basis of a vector space, a vector's \textit{matrix form} is a \textit{column matrix}.
+  % specifying how to determine matrix entries as the coefficients of the linear combination in terms
+  % of basis vectors.
+
+  \mytheorem{Columns}
+  
+  \mytheorem{Linear maps as matrix multiplication}
+  The matrix of a linear map acted on a vector is the matrix multiplication between
+  the \textit{matrix forms} of the map and vector respectively.
+  
+  \mytheorem{Range dimension on matrix}
+  Given a \textit{finite-dimensional} linear map,
+  dimension of its \textit{range} is equal to the \textit{column rank} of its matrix form.
+  
+  \mydefinition{Identity matrix}
+  Square matrix with left to right diagonal filled with 1's.
+
+  \mydefinition{Inverse matrix}
+  Given an \textit{invertible} matrix its inverse is such that their product gives the \textit{idenity matrix}.
+
+  \mytheorem{Matrix of product of linear maps}
+  The matrix of a linear map product is the product of matrices of the linear maps.
+  
+  \mytheorem{Identity matrix with bases}
+  The matrix of an identity map with respect two its basis
+  has inverse equal to itself with inverted basis.
+  
+  %\mytheorem{Change-of-basis formula}
+  
+  \mytheorem{Matrix of inverse}
+  The matrix of the inverse linear map is the inverse matrix of the linear map.
+
+  \mysection{Products and Quotients}
+
+  \mydefinition{Product of vector spaces}
+  \myparagraph{Definition}
+  The set of lists of vectors from the vector spaces respectively.
+  \myparagraph{Addition}
+  Entrywise addition.
+  \myparagraph{Scalar multiplication}
+  Entrywise scalar multiplication.
+
+  \mytheorem{Product of vector spaces structure}
+  The product of vector spaces is a \textit{vector space}.
+
+  \mytheorem{Dimension of the product of vector spaces}
+  The \textit{sum} of the dimensions of the operand vector spaces.
+
+  \mytheorem{Producs and direct sums}
+  Maps from product of spaces two sums of vector spaces is direct if and only if it is \textit{injective}.
+
+  \mytheorem{Direct sum dimension}
+  Sums between vector spaces is direct if and only if its dimensions \textit{add up}.
+
+  \mydefinition{Translations of subsets}
+  The set of all \textit{vector sums} between a vector and the subset elements.
+
+  \mydefinition{Quotient space}
+  The \textit{quotient} between a vector space and a subset of his is the set of all
+  \textit{translates} of the subsets.
+
+  \mytheorem{Translates topology}
+  Two translates of a subspace are equal or disjoint.
+
+  \mydefinition{Quotient addition}
+  The sum of translates of a subset by some vectors
+  is the translate of a subset by the sum of vectors.
+  
+  \mydefinition{Quotient scaling}
+  The scaled translate of a subset by a vector
+  is the translate of a subset by the scaled vector.
+
+  \mytheorem{Quotient space structure}
+  The quotient space is a \textit{vector space}.
+
+  \mydefinition{Quotient map}
+  A linear map from a vector space to its quotient that maps vectors
+  into the translated subset.
+
+  \mytheorem{Dimension of quotient space}
+  The dimension of the quotient between a vector space and a subspace of his
+  is a the difference between their dimensions respectively.
+  
 \end{multicols}
 
 \end{document}
