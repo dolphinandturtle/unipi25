@@ -188,7 +188,7 @@
   \mydefinition{Sum of subspaces}
   The set of all \textit{sums between elements} of distinct subspaces.
   \myparagraph{Structure}
-  The smallest \textit{subspace} containing subspaces \textit{individually}.
+  The smallest \textit{subspace} containing the subspaces \textit{individually}.
 
   \mydefinition{Direct-sum of subspaces}
   A sum of subspaces whose elements can be written as a \textit{unique sum}.
@@ -199,7 +199,7 @@
 
   \mysection{Span and linear independence}
   \mydefinition{Linear combination of vectors}
-  A \textit{sum over the entrywise products} of scalars and vectors.
+  A \textit{sum over an entrywise products} of scalars and vectors.
   
   \mydefinition{Span}
   The set of all \textit{linear combinations} of a list of vectors.
@@ -209,7 +209,7 @@
   \mydefinition{Polynomial with scalar coefficients}
   A field endo-map that sums over the entrywise products of scalars and increasing \textit{whole powers}.
   \myparagraph{Degree}
-  The \textit{greatest power} taken on an element not scaled by zero.
+  The \textit{greatest power} taken, not scaled by zero.
   
   \mydefinition{Cardinality}
   A vector space \textit{spanned} by some list of vectors is \textit{finite-dimensional}, if not then \textit{infinite-dimensional}.
@@ -217,12 +217,11 @@
   \mydefinition{Linear dependence}
   A list of vectors whose null linear combination implies all coefficients to be zero is \textit{linearly independent},
   if not then \textit{linearly dependent}.
-
-  \mytheorem{Linear dependence lemma}
+  \myparagraph{Characterization}
   Some in a linearly dependent list of vectors are in the span of their preceding, \textit{they don't affect the first span}.
   
   \mytheorem{List lenght constraint}
-  In a finite-dimensional vector space, the lenght of a linearly independent list \textit{cannot be greater} than that of a spanning list.
+  The lenght of a linearly independent list \textit{cannot be greater} than that of a spanning list.
   
   \mytheorem{Finite-dimensional subspace}
   A subspace of a finite-dimensional vector space is finite-dimensional.
@@ -265,21 +264,17 @@
 
   \mysection{Linear maps}
   \mydefinition{Linear map}
-  A group endomorphism over addition that commutes with scalar multiplication.
-
-  \mytheorem{Linear map lemma}
+  A \textit{group endomorphism} over addition that \textit{commutes} with scalar multiplication.
+  \myparagraph{Characterization}
   Elements of a basis can be linearly mapped to anything, and the map is unique.
-
-  \mydefinition{Linear map vector operations}
+  \myparagraph{Operations}
   Map addition and scalar multiplication is \textit{pointwise}.
-  
-  \mytheorem{Linear maps space structure}
+  \myparagraph{Structure}
   The space of linear maps with map addition and scalar multiplication is a \textit{vector space}.
 
   \mydefinition{Product of linear maps}
   The product of maps gives their \textit{composition}.
-
-  \mytheorem{Algebraic properties of products of linear maps}
+  \myparagraph{Algebraic properties}
   Associativity, identity and distributivity over addition.
 
   \mytheorem{Mapped null}
@@ -287,20 +282,17 @@
 
   \mydefinition{Null space}
   The set of elements mapped into \textit{null vectors} by a given linear map.
-
-  \mytheorem{Null space structure}
+  \myparagraph{Structure}
   The null space is a \textit{subspace} of the domain of a linear map.
 
   \mydefinition{Injective}
   A map whose distinct elements are \textit{distinctly mapped}.
-
-  \mytheorem{Injective linear map}
+  \myparagraph{Characterization}
   A linear map is injective if and only if the null space is trivial.
 
   \mydefinition{Range}
   The set of elements \textit{mapped} by a given linear map.
-
-  \mytheorem{Range structure}
+  \myparagraph{Structure}
   The range is a subspace of the \textit{codomain} of a linear map.
 
   \mydefinition{Surjective}
@@ -322,22 +314,16 @@
   \mysection{Matrices}
   \mydefinition{Matrix}
   A whole rectangle of numbers with a \textit{row-column} index pair.
+  \myparagraph{Operations}
+  Elementwise \textit{addition} and \textit{scalar multiplication}.
+  \myparagraph{Structure}
+  The space of matrices of a given size with matrix addition and scalar multiplication is a \textit{vector space}.
+  \myparagraph{Dimension}
+  The number of rows times the number of columns.
   
   \mydefinition{Linear map matrix form}
   Each column represents a \textit{mapped domain basis} as a linear combination of \textit{codomain basis} with column coefficients.
-
-  \mydefinition{Matrix addition}
-  Entrywise addition.
-
-  \mydefinition{Matrix scaling}
-  Entrywise scaling.
   
-  \mytheorem{Matrix space structure}
-  The space of matrices of a given size with matrix addition and scalar multiplication is a \textit{vector space}.
-  
-  \mytheorem{Dimension of a matrix}
-  The number of rows times the number of columns.
-
   \mydefinition{Matrix multiplication}
   A map from matrix pairs onto matrices where entries are sums over the component-wise product of
   the pair's row a column respectively.
