@@ -229,13 +229,12 @@
   \mysection{Bases}
   \mydefinition{Basis of a vector space}
   A list of vectors that is linearly \textit{independent} and that \textit{spans} their vector space.
-  
-  \mytheorem{Criterion for basis}
-  A list of vectors is a basis if and only if every other vector can be written as a \textit{unique linear combination} of it.
+  \myparagraph{Characterization}
+  If and only if every other vector can be written as a \textit{unique linear combination} of it.
   
   \mytheorem{List resizing to a basis}
-  Spanning lists of vectors can be \textit{reduced} to a basis. Linearly independent lists of vectors, in a finite-dimensional
-  vector space, can be \textit{extended} to a basis.
+  Spanning lists of vectors can be \textit{reduced} to a basis.
+  Linearly independent lists of vectors can be \textit{extended} to a basis.
 
   \mytheorem{Finite-dimensional vector space basis}
   Finite-dimensional vector spaces have a basis.
@@ -243,7 +242,7 @@
   \mytheorem{Subspace direct completion}
   For every subspace, in a finite-dimensional vector space there exists a \textit{complement} such that their direct sum equals the whole space.
   
-  \mysection{Dimension (finite)}
+  \mysection{Dimension}
   \mytheorem{Basis lenght lemma}
   Any pair of bases of a vector space have the \textit{same lenght}.
   
@@ -266,11 +265,11 @@
   \mydefinition{Linear map}
   A \textit{group endomorphism} over addition that \textit{commutes} with scalar multiplication.
   \myparagraph{Characterization}
-  Elements of a basis can be linearly mapped to anything, and the map is unique.
+  Elements of a basis can be mapped everywhere, and the map is unique.
   \myparagraph{Operations}
-  Map addition and scalar multiplication is \textit{pointwise}.
+  Pointwise \textit{addition} and \textit{scalar multiplication}.
   \myparagraph{Structure}
-  The space of linear maps with map addition and scalar multiplication is a \textit{vector space}.
+  The space of linear maps with addition and scalar multiplication is a \textit{vector space}.
 
   \mydefinition{Product of linear maps}
   The product of maps gives their \textit{composition}.
@@ -278,30 +277,30 @@
   Associativity, identity and distributivity over addition.
 
   \mytheorem{Mapped null}
-  Null vectors are linearly mapped into themselves.
+  Null vectors map into null vectors.
 
   \mydefinition{Null space}
   The set of elements mapped into \textit{null vectors} by a given linear map.
   \myparagraph{Structure}
-  The null space is a \textit{subspace} of the domain of a linear map.
+  \textit{Subspace} of the domain.
 
   \mydefinition{Injective}
   A map whose distinct elements are \textit{distinctly mapped}.
   \myparagraph{Characterization}
-  A linear map is injective if and only if the null space is trivial.
+  If and only if the null space is trivial.
 
   \mydefinition{Range}
   The set of elements \textit{mapped} by a given linear map.
   \myparagraph{Structure}
-  The range is a subspace of the \textit{codomain} of a linear map.
+  \textit{Subspace} of the \textit{codomain}.
 
   \mydefinition{Surjective}
-  A map whose range equals its codomain.
+  A map whose \textit{range} equals its \textit{codomain}.
 
   \mytheorem{Fundamental theorem}
-  A linear map's domain dimension is equal to the sum between the dimensions of its null space and range.
+  A linear map's \textit{domain} dimension is equal to the sum between the dimensions of its \textit{null space} and \textit{range}.
 
-  \mytheorem{Linear maps dimension}
+  \mytheorem{Map classing}
   In matters of dimension, higher isn't \textit{into} lower and lower isn't \textit{onto} higher.
 
   \mytheorem{Solution of linear systems}
@@ -316,17 +315,19 @@
   A whole rectangle of numbers with a \textit{row-column} index pair.
   \myparagraph{Operations}
   Elementwise \textit{addition} and \textit{scalar multiplication}.
-  \myparagraph{Structure}
-  The space of matrices of a given size with matrix addition and scalar multiplication is a \textit{vector space}.
-  \myparagraph{Dimension}
-  The number of rows times the number of columns.
   
-  \mydefinition{Linear map matrix form}
+  \mydefinition{Map matrix-form}
   Each column represents a \textit{mapped domain basis} as a linear combination of \textit{codomain basis} with column coefficients.
+
+  \mydefinition{Matrix space}
+  A set of matrices of fixed geometry with matrix addition and scalar multiplication.
+  \myparagraph{Structure}
+  Vector space.
+  \myparagraph{Dimension}
+  The \textit{row-count} times the \textit{column-count}.
   
   \mydefinition{Matrix multiplication}
-  A map from matrix pairs onto matrices where entries are sums over the component-wise product of
-  the pair's row a column respectively.
+  \textit{Entry-wise} sum of the \textit{component-wise} product of row and column.
   
   \mytheorem{Conservation map operations}
   Linear maps are \textit{homomorphic} to matrices over \textit{addition}, \textit{scaling} and \textit{multiplication}.
@@ -335,14 +336,14 @@
   A matrix with \textit{one row/column}.
 
   \mytheorem{Matrix multiplication entry}
-  The product between the corresponding left and right entries' row and column \textit{matrices} respectively.
+  Entry of matrix equals row-matrix times column-matrix.
 
   \mytheorem{Matrix multiplication column}
-  The product between the left matrix and the right corresponding column matrix respectively.
+  Column of matrix product equals matrix times column-matrix.
 
-  \mytheorem{Linear combination of columns}
-  A matrix multiplication by a column matrix is a linear combination of the
-  matrix columns with column matrix coefficients.
+  \mytheorem{Multiplication by column}
+  A linear combination of the matrix's column-matrices with
+  column-matrix coefficient.
 
   \mytheorem{Matrix multiplication as a linear combination}
   Multiplication columns/rows can be written as the linear combinations of
@@ -356,7 +357,7 @@
   A matrix automap that \textit{inverts} rows and columns.
 
   \mytheorem{Column-row factorization}
-  Every matrix with a column rank greater than zero
+  Every matrix with a non trivial column-rank
   can be written as a product between
   a matrix of \textit{rank-width} and a matrix of \textit{rank-height}.
 
@@ -367,86 +368,76 @@
   The column rank of a matrix.
 
   \mysection{Isomorphisms}
-
   \mydefinition{Inverse}
-  A linear map whose left and right product gives the identity map.
+  Given a map its inverse is such that their left/right and right/left give the identity map.
+  \myparagraph{Cardinality}
+  Given a map the inverse is unique.
+  \myparagraph{Characterization}
+  If and only if it is injective and surjective.
 
-  \mytheorem{Inverse choice}
-  For a given linear map the inverse is unique.
+  \mytheorem{Map class equivalence}
+  \textit{Injectivity}, \textit{surjectivity} and \textit{invertibility} in a linear map between two spaces of equal \textit{finite-dimension} are all equivalent.
 
-  \mytheorem{Invertibility characterization}
-  A linear map is invertible if and only if it is injective and surjective.
-
-  \mytheorem{Injectivity/surjectivity/invertibility equivalence}
-  Injectivity, surjectivity and invertibility in a linear map between two spaces of equal \textit{finite-dimension} are all equivalent.
-
-  \mytheorem{Weak invertibility}
+  \mytheorem{Semi-invertibility}
   If the product of \textit{finite-dimensional} linear maps is the identity, the product \textit{commutes}.
 
   \mydefinition{Isomorphism}
   An invertible linear map.
+  \myparagraph{Existence}
+  If two vector spaces have equal and finite dimension.
 
-  \mytheorem{Isomorphism condition}
-  Vector spaces of equal finite-dimension are isomorphic.
-
-  \mytheorem{Linear maps and matrices}
-  For a given basis of the vector spaces acted upon, the \textit{matrix form} is an
-  \textit{isomorphism} from the space of linear maps to the space of matrices.
+  \mytheorem{Matrix-form morphism}
+  Given a basis of the vector spaces acted upon, the matrix form is an
+  \textit{isomorphism} from the space of \textit{linear maps} to the \textit{space of matrices}.
 
   \mytheorem{Dimension of a linear map}
-  A linear maps dimension is the product between the dimension of its domain and codomain respectively.
+  A linear map's dimension is the product between the dimension of its \textit{domain} and \textit{codomain}.
 
-  \mydefinition{Matrix of a vector}
-  Given a basis of a vector space, a vector's \textit{matrix form} is a \textit{column matrix}.
-  % specifying how to determine matrix entries as the coefficients of the linear combination in terms
-  % of basis vectors.
+  \mydefinition{Vector-matrix}
+  A \textit{column-matrix} of coefficients from the linear combination of a basis representing the vector.
 
-  \mytheorem{Columns}
+  \mytheorem{Matrix column explicitation}
+  A column of a matrix-form is the vector-matrix of the corresponding mapped basis.
   
-  \mytheorem{Linear maps as matrix multiplication}
-  The matrix of a linear map acted on a vector is the matrix multiplication between
-  the \textit{matrix forms} of the map and vector respectively.
+  \mytheorem{Maps as matrix multiplication}
+  A linear mapping of a vector is equal to the matrix multiplication between their matrix-form respectively.
   
-  \mytheorem{Range dimension on matrix}
+  \mytheorem{Range-rank}
   Given a \textit{finite-dimensional} linear map,
-  dimension of its \textit{range} is equal to the \textit{column rank} of its matrix form.
+  the dimension of its \textit{range} is equal to
+  the \textit{column rank} of its matrix form.
   
   \mydefinition{Identity matrix}
   Square matrix with left to right diagonal filled with 1's.
 
   \mydefinition{Inverse matrix}
-  Given an \textit{invertible} matrix its inverse is such that their product gives the \textit{idenity matrix}.
+  Given an \textit{invertible} matrix its inverse is such that their left/right product gives the \textit{idenity matrix}.
 
-  \mytheorem{Matrix of product of linear maps}
-  The matrix of a linear map product is the product of matrices of the linear maps.
+  \mytheorem{Matrix of map products}
+  The matrix-form of a linear map product is the product of the linear maps' matrix-forms.
   
-  \mytheorem{Identity matrix with bases}
-  The matrix of an identity map with respect two its basis
-  has inverse equal to itself with inverted basis.
+  \mytheorem{Identity inverse}
+  The matrix of an identity map with respect to some bases is
+  \textit{its} inverse with inverted bases.
   
-  %\mytheorem{Change-of-basis formula}
-  
+  \mytheorem{Change-of-basis formula}
+    
   \mytheorem{Matrix of inverse}
-  The matrix of the inverse linear map is the inverse matrix of the linear map.
+  The matrix of the inverse map is the inverse matrix of the map.
 
   \mysection{Products and Quotients}
 
   \mydefinition{Product of vector spaces}
   \myparagraph{Definition}
   The set of lists of vectors from the vector spaces respectively.
-  \myparagraph{Addition}
-  Entrywise addition.
-  \myparagraph{Scalar multiplication}
-  Entrywise scalar multiplication.
+  \myparagraph{Operations}
+  Entrywise \textit{addition} and \textit{scalar multiplication}.
+  \myparagraph{Structure} Vector space.
+  \myparagraph{Dimension}
+  The \textit{sum} of dimensions of the operand vector spaces.
 
-  \mytheorem{Product of vector spaces structure}
-  The product of vector spaces is a \textit{vector space}.
-
-  \mytheorem{Dimension of the product of vector spaces}
-  The \textit{sum} of the dimensions of the operand vector spaces.
-
-  \mytheorem{Producs and direct sums}
-  Maps from product of spaces two sums of vector spaces is direct if and only if it is \textit{injective}.
+  \mytheorem{Products and direct sums}
+  Maps from product of spaces to sums of spaces is direct if and only if it is \textit{injective}.
 
   \mytheorem{Direct sum dimension}
   Sums between vector spaces is direct if and only if its dimensions \textit{add up}.
@@ -457,6 +448,10 @@
   \mydefinition{Quotient space}
   The \textit{quotient} between a vector space and a subset of his is the set of all
   \textit{translates} of the subsets.
+  \myparagraph{Operations}
+  \myparagraph{Structure} Vector space.
+  \myparagraph{Dimension}
+  The difference between the dimensions of the \textit{dividend} and \textit{divisor} respectively.
 
   \mytheorem{Translates topology}
   Two translates of a subspace are equal or disjoint.
@@ -469,16 +464,9 @@
   The scaled translate of a subset by a vector
   is the translate of a subset by the scaled vector.
 
-  \mytheorem{Quotient space structure}
-  The quotient space is a \textit{vector space}.
-
   \mydefinition{Quotient map}
   A linear map from a vector space to its quotient that maps vectors
   into the translated subset.
-
-  \mytheorem{Dimension of quotient space}
-  The dimension of the quotient between a vector space and a subspace of his
-  is a the difference between their dimensions respectively.
 
   \mydefinition{Tilde map}
   Linear map on the quotient of space with its kernel that
@@ -497,9 +485,8 @@
 
   \mydefinition{Dual space}
   The vector space of all linear functionals on a vector space.
-
-  \mytheorem{Dimension of the dual space}
-  A vector space's dimension and that of its dual are equal.
+  \myparagraph{Dimension}
+  The dimension of its vector space.
 
   \mydefinition{Dual basis}
   Given a basis of a vector space, the basis of its dual
@@ -524,9 +511,7 @@
 
   \mydefinition{Annihilator}
   The annihilator of a subspace is the set of all linear functionals that send its elements to zero.
-
-  \mytheorem{Annihilator structure}
-  The annihilator of a subspace is a vector space.
+  \myparagraph{Structure} A \textit{subspace} of the subspace's whole space's \textit{dual}.
 
   \mytheorem{Annihilator dimension}
   If a vector space is finite-dimensional, the dimension of the annihilator of a subspace is the difference
