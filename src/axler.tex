@@ -448,21 +448,14 @@
   \mydefinition{Quotient space}
   The \textit{quotient} between a vector space and a subset of his is the set of all
   \textit{translates} of the subsets.
+  \myparagraph{Relations}
+  Two translates of a subspace are \textit{equal} or \textit{disjoint}.
   \myparagraph{Operations}
+  The \textit{sum} of translates is the translates by the sum, the \textit{scaled} translate
+  is the translate by the scaled.
   \myparagraph{Structure} Vector space.
   \myparagraph{Dimension}
   The difference between the dimensions of the \textit{dividend} and \textit{divisor} respectively.
-
-  \mytheorem{Translates topology}
-  Two translates of a subspace are equal or disjoint.
-
-  \mydefinition{Quotient addition}
-  The sum of translates of a subset by some vectors
-  is the translate of a subset by the sum of vectors.
-  
-  \mydefinition{Quotient scaling}
-  The scaled translate of a subset by a vector
-  is the translate of a subset by the scaled vector.
 
   \mydefinition{Quotient map}
   A linear map from a vector space to its quotient that maps vectors
@@ -512,20 +505,16 @@
   \mydefinition{Annihilator}
   The annihilator of a subspace is the set of all linear functionals that send its elements to zero.
   \myparagraph{Structure} A \textit{subspace} of the subspace's whole space's \textit{dual}.
-
-  \mytheorem{Annihilator dimension}
-  If a vector space is finite-dimensional, the dimension of the annihilator of a subspace is the difference
-  between the dimensions of the whole space and subspace respectively.
-
-  \mytheorem{Conditions for trivial annihilator}
-  The annihilator is trivial if and only if the subspace is the whole space.
-  The annihilator is the whole space if and only if the subspace is trivial.
+  \myparagraph{Dimension}
+  The difference between the dimensions of the whole space and subspace respectively
+  \myparagraph{Bounds}
+  The annihilator is \textit{trivial} or the \textit{whole space} if and only if the subspace is the whole space or trivial respectively.
 
   \mytheorem{Null space of a dual map}
   If the map acts upon finite-dimensional vector spaces
   the kernel of the dual map is the annihilator of the range of the map.
-  The dimension of the kernel of the dual map is the dimension of the kernel
-  of the map pluse the dimension of the codomain minus the dimension of the domain.
+  In matters of dimension, that of the kernel of the dual map is that of
+  the kernel of the map plus that of the codomain minus that of the domain.
   
   \mytheorem{Cross dual properties properties}
   If the map acts between finite-dimensional vector spaces then the map is subspace if and only if its dual is injective.
