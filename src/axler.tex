@@ -6,15 +6,15 @@
 \mychapter{Propositions}
 
 \begin{multicols}{3}
-  %\raggedcolumns
   \mysection{Vector spaces}
 
   % TODO
   \mydefinition{Complex numbers}
-  Ordered pairs of real numbers with addition and multiplication consistent with
-  the algebra of a sum between a number and a scaled \textit{root of the negative unit}.
+  Ordered pairs of real numbers with operations consistent with \textit{real arithmetic}
+  with an added quantity whose \textit{square is negative}, real numbers and the latter's
+  multiplicity define the pair respectively.
 
-  \mytheorem{Complex arithemtic}
+  \mytheorem{Complex arithmetic}
   Commutativity, associativity, identities, inverses and product distributivity over addition.
 
   \mydefinition{Subtraction/Division}
@@ -44,7 +44,7 @@
   \mydefinition{Standard vector spaces}
   A real/complex vector space has scalar multiplication defined on the \textit{real/complex field}.
 
-  \mytheorem{Vector arithemtic}
+  \mytheorem{Vector arithmetic}
   Identity and inverses are unique. Null scaling and scaling null is null. Inverse identity scaling is inverse.
 
   \mysection{Subspaces}
@@ -144,7 +144,7 @@
   \mydefinition{Product of linear maps}
   The product of maps gives their \textit{composition}.
 
-  \mytheorem{Map arithemtic}
+  \mytheorem{Map arithmetic}
   Associativity, identity and product distributivity over addition.
 
   \mytheorem{Null mapping}
@@ -238,16 +238,15 @@
   The column rank of a matrix.
 
   \mysection{Isomorphisms}
-  \mydefinition{Inverse}
-  %A map whose product with its former commutes and gives the identity map.
-  Given a map its inverse is such that their product commutes and gives the identity map.
-  \myparagraph{Cardinality}
+  \mydefinition{Inverse of a map}
+  An induced map whose product with the latter \textit{commutes} and gives the \textit{identity} map.
+  \myparagraph{Uniqueness}
   Given a map the inverse is unique.
   \myparagraph{Characterization}
   If and only if it is injective and surjective.
 
-  \mytheorem{Map class equivalence}
-  \textit{Injectivity}, \textit{surjectivity} and \textit{invertibility} in a linear map between two spaces of equal \textit{finite-dimension} are all equivalent.
+  \mytheorem{Invertibility equivalences}
+  \textit{Injectivity}, \textit{surjectivity} and \textit{invertibility} in a map between two spaces of equal \textit{finite} dimension are all equivalent.
 
   \mytheorem{Semi-invertibility}
   If the product of \textit{finite-dimensional} linear maps is the identity, the product \textit{commutes}.
@@ -255,23 +254,25 @@
   \mydefinition{Isomorphism}
   An invertible linear map.
   \myparagraph{Existence}
-  If two vector spaces have equal and finite dimension.
+  If two vector spaces have \textit{equal} and \textit{finite} dimension.
 
   \mytheorem{Matrix-form morphism}
   Given a basis of the vector spaces acted upon, the matrix form is an
   \textit{isomorphism} from the space of \textit{linear maps} to the \textit{space of matrices}.
 
-  \mytheorem{Dimension of a linear map}
-  A linear map's dimension is the product between the dimension of its \textit{domain} and \textit{codomain}.
+  \mytheorem{Map dimension}
+  The product between the dimension of its \textit{domain} and \textit{codomain}.
 
   \mydefinition{Vector-matrix}
-  A \textit{column-matrix} of coefficients from the linear combination of a basis representing the vector.
+  A column-matrix of coefficients that define the vector as a linear combination of the basis.
+  % A \textit{column-matrix} of coefficients from the linear combination of a basis representing the vector.
 
-  \mytheorem{Matrix column explicitation}
-  A column of a matrix-form is the vector-matrix of the corresponding mapped basis.
+  \mytheorem{Basis matrix}
+  A column of a matrix-form is the vector-matrix of the corresponding \textit{mapped basis}.
   
   \mytheorem{Maps as matrix multiplication}
-  A linear mapping of a vector is equal to the matrix multiplication between their matrix-form respectively.
+  A map has equal action to that of multiplication between the matrix forms of the operating and operated respectively.
+  % A linear mapping of a vector is equal to the matrix multiplication between their matrix-form respectively.
   
   \mytheorem{Range-rank}
   Given a \textit{finite-dimensional} linear map,
@@ -282,57 +283,64 @@
   Square matrix with left to right diagonal filled with 1's.
 
   \mydefinition{Inverse matrix}
-  Given an \textit{invertible} matrix its inverse is such that their left/right product gives the \textit{idenity matrix}.
+  Given an \textit{invertible} matrix its inverse is such that their left/right product gives the \textit{identity matrix}.
 
   \mytheorem{Matrix of map products}
-  The matrix-form of a linear map product is the product of the linear maps' matrix-forms.
+  The matrix-form of a map product is the product of the maps' matrix-form.
   
   \mytheorem{Identity inverse}
   The matrix of an identity map with respect to some bases is
   \textit{its} inverse with inverted bases.
   
   \mytheorem{Change-of-basis formula}
+  Endomap matrices over some bases and the identity matrix between the latter
+  are related by the first equaling the product of the inverse identity, the
+  second and the identity.
     
   \mytheorem{Matrix of inverse}
   The matrix of the inverse map is the inverse matrix of the map.
 
   \mysection{Products and Quotients}
-
   \mydefinition{Product of vector spaces}
   \myparagraph{Definition}
-  The set of \textit{vector lists} from the vector spaces respectively.
+  The set of operand-wise elements lists.
+
   \myparagraph{Operations}
   Entrywise \textit{addition} and \textit{scalar multiplication}.
   \myparagraph{Structure} Vector space.
   \myparagraph{Dimension}
-  The \textit{sum} of dimensions of the operand vector spaces.
+  The \textit{sum} of that of the operand vector spaces.
 
   \mytheorem{Direct sum map}
-  A linear map from product to sum that sums entrywise is
-  \textit{into} if and only if the sum of spaces is \textit{direct}.
+  A map from product spaces to sum of spaces that sums entrywise is
+  \textit{into} if and only if the sum is \textit{direct}.
 
   \mytheorem{Direct sum dimension}
-  Sums between vector spaces is direct if and only if its dimensions \textit{add up}.
+  Sums between spaces is direct if and only if its dimensions \textit{add up}.
 
   \mydefinition{Subset translate}
-  A subset of a vector space \textit{summed elementwise} (translated) by one of its elements.
+  A subset of a vector space \textit{summed elementwise} (translated) by an element of the latter.
 
   \mytheorem{Equivalence class}
-  Two translates of a subspace are \textit{equal} or \textit{disjoint}.
+  Two translates of a \textit{subspace} are \textit{equal} or \textit{disjoint}.
 
   \mydefinition{Quotient space}
-  The set of all \textit{translates} of a vector space by elements of its subspace.
+  The set of all \textit{translates} of a vector space by elements of a given \textit{subspace}.
   \myparagraph{Operations}
   The \textit{sum} of translates is the translates by the sum, the \textit{scaled} translate
   is the translate by the scaled.
   \myparagraph{Structure} Vector space.
   \myparagraph{Dimension}
-  The difference between the dimensions of the \textit{dividend} and \textit{divisor} respectively.
+  The difference between that of the \textit{dividend} and \textit{divisor} respectively.
 
   \mydefinition{Quotient map}
-  An \textit{induced} linear map from the domain modulo kernel to the codomain that
-  acts the linear map on the \textit{translation vector}.
-  
+  An \textit{induced} linear map from the domain to a \textit{domain modulo subspace} that
+  translates the given subspace.
+
+  \mydefinition{Tilde map}
+  An \textit{induced} linear map from the \textit{domain modulo kernel} to the codomain that
+  acts the map on the \textit{translation vector}.
+
   \mytheorem{Kernel and range of tilde map}
   Quotient map into tilde map gives the map, tilde map is injective,
   tilde map's range is equal to that of its map and
@@ -342,15 +350,15 @@
   \mysection{Duality}
 
   \mydefinition{Linear functional}
-  A linear map to a field.
+  A linear map to a \textit{field}.
 
   \mydefinition{Dual space}
   The set of linear functionals from a given space.
   \myparagraph{Dimension}
-  The dimension of the domain.
+  That of the domain.
 
   \mydefinition{Dual basis}
-  The list of functionals that map corresponding basis entries
+  The list of \textit{functionals} that map corresponding basis entries
   into 1 and the rest into 0.
 
   \mytheorem{Coefficient extraction}
@@ -358,17 +366,17 @@
   to the latter's representation as a linear combination of the basis.
 
   \mytheorem{Dual basis coherence}
-  The dual basis of a vector space is a basis of its dual.
+  The dual basis of a space is a basis of its dual.
 
   \mydefinition{Dual map}
-  An induced map from the dual codomain to dual domain
+  An \textit{induced} map from the dual codomain to dual domain
   that lets the map get \textit{acted on}.
 
-  \mytheorem{Algebraic properties of dual maps}
+  \mytheorem{Dual map algebra}
   Duality \textit{distributes} over addition and scalar multiplication.
   The dual of the product is the \textit{commuted product} of the duals.
 
-  \mydefinition{Annihilator}
+  \mydefinition{Subset annihilator}
   The set of linear functionals that sends \textit{subdomain} elements to zero.
   \myparagraph{Structure} A \textit{subspace} of the \textit{dual domain}.
 
@@ -385,14 +393,14 @@
   the codomain, and minus the domain.
   
   \mytheorem{Injective dual map}
-  A finite-dimensional map is surjective if and only if its dual is injective.
+  A \textit{finite-dimensional} map is surjective if and only if its dual is injective.
 
   \mytheorem{Range of a dual map}
   The annihilator of the map's kernel is the \textit{dual's range}.
   The dimension of the map's range is equal to that of its dual's.
 
   \mytheorem{Surjective dual map}
-  A finite-dimensional map is injective if and only if its dual is surjective.
+  A \textit{finite-dimensional} map is injective if and only if its dual is surjective.
 
   \mytheorem{Dual map matrix}
   A finite-dimensional map's matrix form traspose is the dual's matrix form.
