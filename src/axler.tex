@@ -6,17 +6,19 @@
 \mychapter{Propositions}
 
 \begin{multicols}{3}
+  %\raggedcolumns
   \mysection{Vector spaces}
 
+  % TODO
   \mydefinition{Complex numbers}
   Ordered pairs of real numbers with addition and multiplication consistent with
   the algebra of a sum between a number and a scaled \textit{root of the negative unit}.
 
-  \mytheorem{Properties of complex arithmetic}
-  Commutativity, associativity, identities, inverses and distributivity.
+  \mytheorem{Complex arithemtic}
+  Commutativity, associativity, identities, inverses and product distributivity over addition.
 
   \mydefinition{Subtraction/Division}
-  Adding/Multiplying by the \textit{inverse} of the operand.
+  Adding/Multiplying by the \textit{inverse} of the latter operand.
 
   \mydefinition{List of lenght}
   A \textit{finite} set with an \textit{ordering}.
@@ -32,9 +34,9 @@
 
   \mydefinition{Vector operations}
   \myparagraph{Addition}
-  A map from a space to \textit{its} endomaps.
+  A map to domain endomaps.
   \myparagraph{Scalar multiplication}
-  A map from a \textit{field} to the endomaps of a space.
+  A map from a \textit{field} to some endomaps.
 
   \mydefinition{Vector space}
   An \textit{abelian group} under addition with a \textit{ring homomorphism} from a \textit{field} into the group's \textit{endomorphism ring} as scalar multiplication.
@@ -42,7 +44,7 @@
   \mydefinition{Standard vector spaces}
   A real/complex vector space has scalar multiplication defined on the \textit{real/complex field}.
 
-  \mytheorem{Algebraic properties}
+  \mytheorem{Vector arithemtic}
   Identity and inverses are unique. Null scaling and scaling null is null. Inverse identity scaling is inverse.
 
   \mysection{Subspaces}
@@ -52,25 +54,26 @@
   If and only if it contains the additive identity and is \textit{closed} under the operations.
 
   \mydefinition{Sum of subspaces}
-  The set of all \textit{sums between elements} of distinct subspaces.
+  The set of \textit{sums} between elements of respective subspaces.
   \myparagraph{Structure}
   The smallest \textit{subspace} containing the subspaces \textit{individually}.
 
-  \mydefinition{Direct-sum of subspaces}
-  A sum of subspaces whose elements can be written as a \textit{unique sum}.
-  \myparagraph{Reciprocal characterization}
-  If and only if its \textit{null vector} can be written as a unique sum of null vectors.
-  \myparagraph{Set characterization}
-  If and only if the \textit{intersection} between the operands is trivial.
+  \mydefinition{Direct-sum}
+  A sum of subspaces whose elements can be written as a \textit{unique} sum.
+  \myparagraph{Characterization}
+  If and only if its \textit{null vector} can be written as a \textit{unique} sum of null vectors.
+
+  \mytheorem{Direct-sum of a pair}
+  If and only if their \textit{intersection} is trivial.
 
   \mysection{Span and linear independence}
-  \mydefinition{Linear combination of vectors}
-  A \textit{sum over an entrywise products} of scalars and vectors.
+  \mydefinition{Linear combination}
+  A \textit{sum over entrywise products} of scalars and vectors.
   
-  \mydefinition{Span}
-  The set of all \textit{linear combinations} of a list of vectors.
+  \mydefinition{Span of vectors}
+  The set of all the vector's \textit{linear combinations}.
   \myparagraph{Structure}
-  The smallest subspace containing the list of vectors.
+  The smallest subspace containing the vectors.
 
   \mydefinition{Polynomial with scalar coefficients}
   A field endo-map that sums over the entrywise products of scalars and increasing \textit{whole powers}.
@@ -78,18 +81,20 @@
   The \textit{greatest power} taken, not scaled by zero.
   
   \mydefinition{Cardinality}
-  A vector space \textit{spanned} by some list of vectors is \textit{finite-dimensional}, if not then \textit{infinite-dimensional}.
+  A vector space spanned by some list of \textit{its} vectors
+  is \textbf{finite-dimensional},
+  if not then \textbf{infinite-dimensional}.
   
   \mydefinition{Linear dependence}
   A list of vectors whose null linear combination implies all coefficients to be zero is \textit{linearly independent},
   if not then \textit{linearly dependent}.
   \myparagraph{Characterization}
-  Some in a linearly dependent list of vectors are in the span of their preceding, \textit{they don't affect the first span}.
+  Some in a linearly dependent list are in the span of their preceding, \textit{they don't affect the first span}.
   
   \mytheorem{List lenght constraint}
   The lenght of a linearly independent list \textit{cannot be greater} than that of a spanning list.
   
-  \mytheorem{Finite-dimensional subspace}
+  \mytheorem{Subspace cardinality}
   A subspace of a finite-dimensional vector space is finite-dimensional.
   
   \mysection{Bases}
@@ -98,11 +103,10 @@
   \myparagraph{Characterization}
   If and only if every other vector can be written as a \textit{unique linear combination} of it.
   
-  \mytheorem{List resizing to a basis}
-  Spanning lists of vectors can be \textit{reduced} to a basis.
-  Linearly independent lists of vectors can be \textit{extended} to a basis.
+  \mytheorem{List resizing}
+  A spanning/independent list can be reduced/extended to a basis by removing/adding some elements.
 
-  \mytheorem{Finite-dimensional vector space basis}
+  \mytheorem{Basis cardinality}
   Finite-dimensional vector spaces have a basis.
   
   \mytheorem{Subspace direct completion}
@@ -113,10 +117,10 @@
   Any pair of bases of a vector space have the \textit{same lenght}.
   
   \mydefinition{Dimension of a vector space}
-  The \textit{lenght} of any basis of the vector space.
+  The \textit{lenght} of a basis of the vector space.
   
   \mytheorem{Dimension of a subspace}
-  The dimension of a subspace \textit{cannot be greater} than the dimension of the whole space.
+  The dimension of a subspace \textit{cannot} be greater than that of the whole space.
   
   \mytheorem{Full dimension subspace}
   A subspace whose dimension is \textit{equal} to that of its whole space, is the whole space itself.
@@ -129,39 +133,40 @@
 
   \mysection{Linear maps}
   \mydefinition{Linear map}
-  A \textit{group endomorphism} over addition that \textit{commutes} with scalar multiplication.
+  A \textit{group homomorphism} over addition that \textit{commutes} with scalar multiplication.
   \myparagraph{Characterization}
   Elements of a basis can be mapped everywhere, and the map is unique.
   \myparagraph{Operations}
   Pointwise \textit{addition} and \textit{scalar multiplication}.
   \myparagraph{Structure}
-  The space of linear maps with addition and scalar multiplication is a \textit{vector space}.
+  Vector space.
 
   \mydefinition{Product of linear maps}
   The product of maps gives their \textit{composition}.
-  \myparagraph{Algebraic properties}
-  Associativity, identity and distributivity over addition.
 
-  \mytheorem{Mapped null}
+  \mytheorem{Map arithemtic}
+  Associativity, identity and product distributivity over addition.
+
+  \mytheorem{Null mapping}
   Null vectors map into null vectors.
 
-  \mydefinition{Null space}
-  The set of elements mapped into \textit{null vectors} by a given linear map.
+  \mydefinition{Null space of a map}
+  The set of elements mapped into \textit{null vectors}.
   \myparagraph{Structure}
   \textit{Subspace} of the domain.
 
   \mydefinition{Injective}
-  A map whose distinct elements are \textit{distinctly mapped}.
+  Distinct action for distinct elements.
   \myparagraph{Characterization}
   If and only if the null space is trivial.
 
-  \mydefinition{Range}
-  The set of elements \textit{mapped} by a given linear map.
+  \mydefinition{Range of a map}
+  The set of mapped elements.
   \myparagraph{Structure}
   \textit{Subspace} of the \textit{codomain}.
 
   \mydefinition{Surjective}
-  A map whose \textit{range} equals its \textit{codomain}.
+  Whose \textit{range} equals its \textit{codomain}.
 
   \mytheorem{Fundamental theorem}
   A linear map's \textit{domain} dimension is equal to the sum between the dimensions of its \textit{null space} and \textit{range}.
@@ -171,14 +176,14 @@
 
   \mytheorem{Solution of linear systems}
   \paragraph{\textbf{Homogeneous}}
-  A system of linear equations with more variables than equations and null costant terms, has \textit{non-zero solutions}.
+  With more variables than equations and null costant terms, has \textit{non-zero solutions}.
   
-  \paragraph{\textbf{Eterogeneous}}
-  A system of linear equations with more equation than variables has \textit{no solution} for some choice of constant terms.
+  \paragraph{\textbf{Heterogeneous}}
+  With more equation than variables has \textit{no solution} for some choice of constant terms.
   
   \mysection{Matrices}
   \mydefinition{Matrix}
-  A whole rectangle of numbers with a \textit{row-column} index pair.
+  A \textit{discrete} rectangle of numbers with a \textit{row-column} index pair.
   \myparagraph{Operations}
   Elementwise \textit{addition} and \textit{scalar multiplication}.
   
@@ -186,7 +191,7 @@
   Each column represents a \textit{mapped domain basis} as a linear combination of \textit{codomain basis} with column coefficients.
 
   \mydefinition{Matrix space}
-  A set of matrices of fixed geometry with matrix addition and scalar multiplication.
+  A set of matrices of \textit{fixed} geometry with matrix addition and scalar multiplication.
   \myparagraph{Structure}
   Vector space.
   \myparagraph{Dimension}
@@ -195,32 +200,31 @@
   \mydefinition{Matrix multiplication}
   \textit{Entry-wise} sum of the \textit{component-wise} product of row and column.
   
-  \mytheorem{Conservation map operations}
-  Linear maps are \textit{homomorphic} to matrices over \textit{addition}, \textit{scaling} and \textit{multiplication}.
+  \mytheorem{Matrix-form distributivity with maps}
+  The matrix-form of a map distributes over \textit{addition}, \textit{scaling} and \textit{multiplication}.
 
   \mydefinition{Row/column matrices}
   A matrix with \textit{one row/column}.
 
-  \mytheorem{Matrix multiplication entry}
-  Entry of matrix equals row-matrix times column-matrix.
+  \mytheorem{Entry of multiplication}
+  The product between the corresponding multiplicand row and multiplier column.
 
-  \mytheorem{Matrix multiplication column}
-  Column of matrix product equals matrix times column-matrix.
+  \mytheorem{Column of multiplication}
+  The product between the multiplicand matrix and the corresponding multiplier column.
 
   \mytheorem{Multiplication by column}
-  A linear combination of the matrix's column-matrices with
-  column-matrix coefficient.
+  A linear combination of the multiplicand columns with multiplier column coefficient.
 
-  \mytheorem{Matrix multiplication as a linear combination}
+  \mytheorem{Multiplication as a linear combination}
   Multiplication columns/rows can be written as the linear combinations of
-  left/right columns/rows with
-  the corresponding right/left column/row coefficients.
+  multiplicand/multiplier columns/rows with
+  the corresponding multiplier/multiplicand column/row coefficients.
   
   \mydefinition{Column/row rank}
   Dimension of the span of the columns/rows of a matrix.
 
-  \mydefinition{Transpose of a matrix}
-  A matrix automap that \textit{inverts} rows and columns.
+  \mydefinition{Transpose}
+  A matrix automap that \textit{swaps} rows and columns.
 
   \mytheorem{Column-row factorization}
   Every matrix with a non trivial column-rank
@@ -235,7 +239,8 @@
 
   \mysection{Isomorphisms}
   \mydefinition{Inverse}
-  Given a map its inverse is such that their left/right and right/left give the identity map.
+  %A map whose product with its former commutes and gives the identity map.
+  Given a map its inverse is such that their product commutes and gives the identity map.
   \myparagraph{Cardinality}
   Given a map the inverse is unique.
   \myparagraph{Characterization}
