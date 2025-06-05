@@ -21,8 +21,28 @@
   \mydefinition{Local and Non-local matrix operations}
   In matter of matrices, local operations are those who act on one entry, if not than non-local.
 
+  \mydefinition{Convex Hull}
+  The set of lines tangent to a function;
+  \begin{equation}
+    \label{eq:convex-hull}
+    (m, q) \in CH(f) \iff \exists!x : f(x) = mx + q
+  \end{equation}
+  from which it is always possible to reconstruct the function,
+  \begin{equation}
+    f(x) = \max_{m, q}\{mx + q\}
+  \end{equation}
+  furthermore if the function is \textit{convex} this set can be
+  represented as a function itself
+  \begin{equation}
+    f(x) = \max_{m}\{mx + q(m)\}
+  \end{equation}
+
   \mydefinition{Legendre Transform}
-  The \textit{opposite} of a function's convex hull, when the function is convex the convex hull is a function as well.
+  The \underline{opposite} of a function's \textit{convex hull}.
+  \begin{equation}
+    \label{eq:legendre-transform}
+    f^*(x^*):= -q(m) = \max_{x}\{mx - f(x)\}
+  \end{equation}
 
 \end{multicols}
 
