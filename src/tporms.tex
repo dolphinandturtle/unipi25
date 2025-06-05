@@ -1,0 +1,82 @@
+\include{packages}
+\include{definitions}
+\usepackage[english]{babel}
+
+\title{The principle of relativity made simple}
+\author{Alessandro Rayan Ahmed}
+\date{\today}
+
+\begin{document}
+
+\begin{multicols}{3}
+  \maketitle
+  \mysection{Special principle of relativity}
+  The physical laws that hold in a system are invariant in form
+  in relation to any other system moving in uniform translation.
+
+  \begin{equation}
+    \label{eq:v-isotropy}
+    \begin{gathered}
+      \lambda R_{\vec{v}} = R_{\vec{v}}\lambda \\
+      \lambda_{\vec{u}}(-\mathds{1}_{\vec{v}}) = (-\mathds{1}_{\vec{v}})\lambda_{\vec{v}} \\
+    \end{gathered}
+  \end{equation}
+
+  %\begin{equation}
+  %  \label{eq:x-decomposed}
+  %  \begin{gathered}
+  %    \bar{X} = \bar{X}_{\parallel \bar{V}} + \bar{X}_{\parallel \bar{T}} - \bar{X}_{\parallel\bar{V}\parallel\bar{T}} + \bar{X}_{\perp\bar{V}\perp\bar{T}} \\
+  %    \begin{cases}
+  %      \bar{X}_{\parallel \bar{V}} = \left(\bar{X}*\bar{V}\right)\bar{V} \\
+  %      \bar{X}_{\parallel \bar{T}} = \left(\bar{X}*\bar{T}\right)\bar{T} \\
+  %      \bar{X}_{\parallel\bar{V}\parallel\bar{T}} = \left(\left(\left(\bar{X}*\bar{V}\right)\bar{V}\right)*\bar{T}\right)\bar{T}
+  %    \end{cases}
+  %  \end{gathered}
+  %\end{equation}
+  %
+  %\begin{align*}
+  %  \begin{split}
+  %    \bar{X} &= \left(\bar{X}*\bar{V}\right)\bar{V} + \left(\bar{X} - \left(\bar{X}*\bar{V}\right)\bar{V}\right) \\
+  %            &\equiv \bar{X}_{\parallel \bar{V}} + \bar{X}_{\perp \bar{V}}
+  %  \end{split}
+  %\end{align*}
+  %\begin{align*}
+  %  \begin{split}
+  %    \bar{X}_{\perp\bar{V}} &= \left(\bar{X}_{\perp\bar{V}}*\bar{T}\right)\bar{T} + \left(\bar{X}_{\perp\bar{V}} - \left(\bar{X}_{\perp\bar{V}}*\bar{T}\right)\bar{T}\right)\\
+  %                           &\equiv \left(\left(\bar{X} - \left(\bar{X}*\bar{V}\right)\bar{V}\right)*\bar{T}\right)\bar{T} + \bar{X}_{\perp\bar{V}\perp\bar{T}} \\
+  %                           &\equiv \bar{X}_{\parallel\bar{T}} - \bar{X}_{\parallel\bar{V}\parallel\bar{T}} + \bar{X}_{\perp\bar{V}\perp\bar{T}}
+  %  \end{split}
+  %\end{align*}
+
+  The rotation is substituted
+  \begin{equation}
+    \label{eq:-constraint}
+    \left[\lambda, \left(\mathds{1} - \bar{P}^2\right)\left(\bar{V}^2 + \bar{T}^2 - \bar{V}^2\bar{T}^2\right) + \bar{P}^2\right] = \bar{0}
+  \end{equation}
+  
+  \begin{equation}
+    \label{eq:flipping-constraint}
+    \left(\lambda_{\vec{u}} - \lambda_{\vec{v}}^t\right)\left(\mathds{1} - 2\bar{V}^2\right) = \bar{0} 
+  \end{equation}
+    
+  %\begin{align*}
+  %  \begin{split}
+  %    &\lambda R_{\vec{v}}\bar{X} = \lambda\bar{X}_{\parallel\vec{v}} + \lambda R_{\vec{v}}\bar{X}_{\perp\vec{v}} \\
+  %    &= \lambda\circ\left(\bar{V}^2 + \bar{T}^2 - \bar{V}^2\bar{T}^2\right)\bar{X} + \lambda R_{\vec{v}}\bar{X}_{\perp\bar{V}\perp\bar{T}}
+  %  \end{split}
+  %\end{align*}
+  %
+  %\begin{align*}
+  %  \begin{split}
+  %    &R_{\vec{v}}\lambda\bar{X} = \left(\lambda\bar{X}\right)_{\parallel\vec{v}} + R_{\vec{v}}\left(\lambda\bar{X}\right)_{\perp\vec{v}} \\
+  %    &= \left(\bar{V}^2 + \bar{T}^2 - \bar{V}^2\bar{T}^2\right)\lambda\bar{X} + R_{\vec{v}}\lambda\bar{X}_{\perp\bar{V}\perp\bar{T}}
+  %  \end{split}
+  %\end{align*}
+  %
+  %\begin{equation*}
+  %  \left[\lambda, \left(\bar{V}^2 + \bar{T}^2 -\bar{V}^2\bar{T}^2\right)\bar{X} + R_{\vec{v}}\bar{X}_{\perp\bar{V}\perp\bar{T}}\right] = \bar{0}
+  %\end{equation*}
+
+\end{multicols}
+
+\end{document}
