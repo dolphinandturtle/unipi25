@@ -14,6 +14,8 @@ all:
 	make brachistochrone
 	make ytnotes
 	make sparse
+	make mymath
+	make union-of-vector-spaces
 
 axler: src/axler.tex
 	cd src/ && \
@@ -98,6 +100,18 @@ sparse: src/sparse.tex
 	pdflatex -shell-escape sparse.tex && \
 	pdflatex -shell-escape sparse.tex
 	mv src/sparse.pdf .
+
+mymath: src/mymath.tex
+	cd src/ && \
+	pdflatex -shell-escape mymath.tex && \
+	pdflatex -shell-escape mymath.tex
+	mv src/mymath.pdf .
+
+union-of-vector-spaces: src/union-of-vector-spaces.tex
+	cd src/ && \
+	pdflatex -shell-escape union-of-vector-spaces.tex && \
+	pdflatex -shell-escape union-of-vector-spaces.tex
+	mv src/union-of-vector-spaces.pdf .
 
 # Cleaning
 clean:

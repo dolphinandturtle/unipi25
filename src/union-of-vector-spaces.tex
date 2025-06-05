@@ -1,0 +1,87 @@
+\include{packages}
+\include{definitions}
+\usepackage[english]{babel}
+
+
+\title{Union of vector spaces}
+
+\begin{document}
+
+\begin{multicols}{3}
+  \maketitle
+
+  \mytheorem{Heterosum}
+  Given a vector space $V$ with partition elements $A$ subspace and $B$ set, then
+  $A + B \subseteq B$.
+
+  \mytheorem{Sum of partitions}
+  Given a vector space $V$ and two subspaces $A$ and $B$ such that
+  $A \not\subseteq B$ and $B \not\subseteq A$, then
+  $(A\setminus B) + (B\setminus A) \not\subseteq A \cup B$. \\
+  \begin{minipage}{1.0\linewidth}
+    \myproof{
+      Assuming there is \underline{no superset and subset} relationship between $A$ and $B$
+      their intersection will not be trivial
+      \begin{equation}
+        \begin{gathered}
+          b' \in B\setminus A \implies b' \in B \text{ and } b' \not\in A \\
+          a' \in A\setminus B \implies a' \in A \text{ and } a' \not\in B
+        \end{gathered}
+      \end{equation}
+      Because vector addition is \underline{commutative and associative}, one reaches the
+      following contraddiction
+      \begin{equation}
+        \begin{gathered}
+          \left[\forall a', b' : (a' + b') \in A\right] \text{ then }\\
+          \Big[(a' + b') - a' \in A \text{ and } (a' + b') - a' = \\
+          (b' + a') - a' = b' + (a' - a') = b' + 0 = b'\Big] \text{ then } \\
+          \left[b' \in A \text{ a contraddiction with } b' \in B\setminus A\right] \quad !
+        \end{gathered}
+      \end{equation}
+      the same argument can be repeated by symbolically swapping in the previous
+      implication chain $a'\leftrightarrows b'$ and $A\leftrightarrows B$ to reach and
+      analogue conclusion
+      \begin{equation}
+        \begin{gathered}
+          \left[\forall b', a' : (b' + a') \in B\right] \text{ then } \cdots \\
+          \left[a' \in B \text{ a contraddiction with } a' \in A\setminus B\right] \quad !
+        \end{gathered}
+      \end{equation}
+      both of the previous contraddiction imply the negation of their hypothesis thus
+      resolving the proof
+      \begin{equation}
+        \begin{gathered}
+          \forall a', b' : (a' + b') \not\in A \text{ and } (a' + b') \not\in B \\
+          \forall a', b' : \text{not}\left[(a' + b') \in A \text{ or } (a' + b') \in B\right] \\
+          \forall a', b' : \text{not}\left[(a' + b') \in A \cup B \right] \\
+          \forall a', b' : (a' + b') \not\in A \cup B \\
+          (A\setminus B) + (B\setminus A) \not\subseteq A \cup B \quad \blacksquare
+        \end{gathered}
+      \end{equation}
+    }
+  \end{minipage}
+
+  \mytheorem{Union of two vector spaces}
+  Given a vector space $V$ and two subspaces $A$, $B$ of it,
+  their union $A \cup B$ is itself a subspace of $V$
+  if and only if $A$ is contained in $B$ or viceversa.
+  \begin{minipage}{1.0\linewidth}
+    \myproof{
+      If $A \subseteq B$ then $A \cup B = B$, $B$ is a subspace of $V$,
+      if $B \subseteq A$ then $A \cup B = A$, $A$ is a subspace of $V$
+      thus proving the ``if'' statement $\square$. \\
+      If $A \cup B$ is a subspace of $V$ then since $(A\setminus B) \subseteq A \cup B$ and
+      $(B\setminus A) \subseteq A \cup B$ naturally $(A\setminus B) + (B\setminus A) \subseteq A \cup B$.
+      It has also been proven that for non overlapping subspaces $(A\setminus B) + (B\setminus A) \not\subseteq A \cup B$.
+      Then $A$ and $B$ must be overlapping $\blacksquare$.
+    }
+  \end{minipage}
+
+  \mytheorem{Finite union of vector spaces}
+  Given a vector space $V$ and a family of subspaces $\mathcal{F}$, then $\bigcup\mathcal{F}$ is
+  a subspace if and only if $\exists j \forall i : U_j \in \mathcal{F}, U_i \subseteq U_j$.
+
+
+\end{multicols}
+
+\end{document}

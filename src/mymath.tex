@@ -1,0 +1,26 @@
+\include{packages}
+\include{definitions}
+\usepackage[english]{babel}
+
+
+
+\begin{document}
+\title{Note di Alessandro}
+
+
+
+\begin{multicols}{3}
+  \maketitle
+  N-body system of unitary masses coupled by a network of equal \textit{pseudo}-springs (rest lenght $L$ and elastic coefficient $\lambda$) via the characteristic tensor $M_{ij}$.
+  The term \textit{pseudo}-springs references the fact that the squared euclidean norm is used over the the standard one.
+  \begin{equation}
+    \label{eq:spring-network}
+    \begin{gathered}
+      (\Delta\vec{r}_i)^t\left(\ddot{\vec{r}}_i + \lambda\Delta\vec{r}_i\right) = \lambda L^2 \\
+      \Delta\vec{r}_i \equiv \sum_{j=1}^NM_{ij}\left(\vec{r}_i - \vec{r_j}\right) \\
+      M_{ii} = 0, \quad M_{ij} \in \{0, 1\} \quad, M_{ij} = M_{ji}
+    \end{gathered}
+  \end{equation}
+\end{multicols}
+
+\end{document}
